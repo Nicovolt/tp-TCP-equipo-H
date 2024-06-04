@@ -1,4 +1,4 @@
-﻿/** {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,10 +7,9 @@
 
 .header {
     z-index: 100;
-    background: blue;
     height: 70px;
     width: 100%;
-   position: relative;
+    position: fixed;
     box-shadow: 0 0 6px 0 rgb(0, 0, 0);
 }
 
@@ -35,28 +34,26 @@
     font-weight: 700;
 }
 
-    .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 0 130px;
-    }
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 130px;
+}
+.menu li {
+    float: left;
+    list-style: none;
+}
+.menu a {
+     margin-left: 20px;
+     line-height: 70px;
+     text-align: right;
+     text-decoration: none;
+     color: black;
+}
+.menu a:hover {
+    color: blue
+}
 
-    .menu li {
-        float: left;
-        list-style: none;
-    }
-
-    .menu a {
-        margin-left: 20px;
-        line-height: 70px;
-        text-align: right;
-        text-decoration: none;
-        color: black;
-    }
-
-    .menu a:hover {
-         color: blue
-    }
 footer {
     height: 70px;
     max-width: 1200%;
@@ -67,4 +64,4 @@ footer {
     font-size: 16px;
     height: 60px;
     line-height: 60px;
-}*/
+}

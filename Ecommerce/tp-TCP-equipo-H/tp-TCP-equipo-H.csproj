@@ -69,6 +69,13 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\buzos.jpg" />
+    <Content Include="Imagenes\camperas.jpg" />
+    <Content Include="Imagenes\Gafas.jpg" />
+    <Content Include="Imagenes\Pantalones.jpg" />
+    <Content Include="Imagenes\remeras.jpg" />
+    <Content Include="Imagenes\sweater.jpg" />
+    <Content Include="Style.css" />
     <Content Include="StyleM.css" />
     <Content Include="Web.config" />
   </ItemGroup>
