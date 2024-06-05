@@ -9,6 +9,7 @@ namespace tp_TCP_equipo_H
 {
     public partial class Articulo : System.Web.UI.Page
     {
+        /*public List<Articulos> ListArtculos { get; set; }*/
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -17,6 +18,8 @@ namespace tp_TCP_equipo_H
                 if (!string.IsNullOrEmpty(nombreArticulo))
                 {
                     lblArticulo.Text = nombreArticulo;
+                    repeaterArticulos.DataSource = "ListArtculos";
+                    repeaterArticulos.DataBind();
                 }
                 else
                 {
