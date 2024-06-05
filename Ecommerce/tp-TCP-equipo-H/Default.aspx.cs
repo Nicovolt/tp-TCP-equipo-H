@@ -11,6 +11,8 @@ namespace tp_TCP_equipo_H
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*string Nombre = lblRemeras.Text;
+            Response.Redirect("Articulo.aspx?nombre=" + Nombre, false);*/
 
         }
     }

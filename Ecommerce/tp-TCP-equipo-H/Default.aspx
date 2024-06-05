@@ -15,7 +15,7 @@
         width: 400px;
         margin: 0 auto;            
     }
-    .card p{
+    .lblNombre{
         color:white;
         font-size:50px;
         position:absolute;
@@ -35,43 +35,40 @@
 
         <div class="col">
             <div class="card">
-                <img src="Imagenes/remeras.jpg" class="card-img-top" alt="Imagen del artículo" />
-                <p>Remeras</p>
+                <a href="Articulo.aspx?nombre=Remeras"><img src="Imagenes/remeras.jpg" class="card-img-top" alt="Imagen del artículo" />
+                <asp:Label ID="lblRemeras" CssClass="lblNombre" Text="Remeras" runat="server" /></a>
             </div>
         </div>
         <div class="col">
             <div class="card">
-                <img src="Imagenes/Pantalones.jpg" class="card-img-top" alt="Imagen del artículo" />
-                <p>Pantalones</p>
+                <a href="Articulo.aspx?nombre=Pantalones"><img src="Imagenes/Pantalones.jpg" class="card-img-top" alt="Imagen del artículo" />
+                <asp:Label ID="lblPantalones" CssClass="lblNombre" Text="Pantalones" runat="server" /></a>
             </div>
         </div>
         <div class="col">
             <div class="card">
-                <img src="Imagenes/sweater.jpg" class="card-img-top" alt="Imagen del artículo" />
-                <p>Sweater</p>
+                <a href="Articulo.aspx?nombre=Sweater"><img src="Imagenes/sweater.jpg" class="card-img-top" alt="Imagen del artículo" />
+                <asp:Label id="lblSweater" CssClass="lblNombre" Text="Sweater" runat="server" /></a>
             </div>
         </div>
         <div class="col">
             <div class="card">
-                <img src="Imagenes/buzos.jpg" class="card-img-top" alt="Imagen del artículo" />
-                <p>Buzos</p>
+                <a href="Articulo.aspx?nombre=Buzos"><img src="Imagenes/buzos.jpg" class="card-img-top" alt="Imagen del artículo" />
+                <asp:Label ID="lblBuzos" CssClass="lblNombre" Text="Buzos" runat="server" /></a>
             </div>
         </div>
         <div class="col">
             <div class="card">
-                <img src="Imagenes/camperas.jpg" class="card-img-top" alt="Imagen del artículo" />
-                <p>Camperas</p>
+                <a href="Articulo.aspx?nombre=Camperas"><img src="Imagenes/camperas.jpg" class="card-img-top" alt="Imagen del artículo" />
+                <asp:Label ID="lblCamperas" CssClass="lblNombre" Text="Camperas" runat="server" /></a>
             </div>
         </div>
         <div class="col">
             <div class="card">
-                <img src="Imagenes/Gafas.jpg" class="card-img-top" alt="Imagen del artículo" />
-                <p>Gafas</p>
+                <a href="Articulo.aspx?nombre=Gafas"><img src="Imagenes/Gafas.jpg" class="card-img-top" alt="Imagen del artículo" />
+                <asp:Label ID="lblGafas" CssClass="lblNombre" Text="Gafas" runat="server" /></a>
             </div>
-        </div>
-        
-       
-        
+        </div>        
     </div>
 </asp:Content>
 
