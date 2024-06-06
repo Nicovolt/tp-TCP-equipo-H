@@ -10,16 +10,17 @@
     <asp:Label ID="lblArticulo" CssClass="lblArticulo" Text="" runat="server" />
     <asp:Repeater runat="server" ID="repeaterArticulos">
         <ItemTemplate>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                    <div class="card">
-                        <img src="#" class="card-img-top" alt="Imagen del artículo" />
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text">Descripcio:</p>
-                            <p class="card-text">Precio: </p>
-                            <a href="DetallesArticulo.aspx?id= " class="btn btn-primary">Ver detalle </a>
-                            <a href="CarritoCompras.aspx?id=" class="btn btn-success" onclick="redireccionarCarrito()">Agregar al carrito</a>
+                            <h5 class="card-title"><%# Eval("NombreArticulo") %></h5>
+                            <p class="card-text">Descripcio: <%# Eval("Descripcion") %></p>
+                            <p class="card-text">Precio: <%# Eval("Precio") %></p>
+                            <asp:Button ID="btnVerDetalle" runat="server" Text="Ver detalle" class="btn btn-primary" />
+                            <asp:Button ID="btnCarrito" runat="server" Text="Agregar al carrito" CssClass="btn btn-success" />
+
                         </div>
                     </div>
                 </div>

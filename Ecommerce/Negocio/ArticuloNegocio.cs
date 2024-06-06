@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dominio;
 
 namespace Negocio
 {
@@ -134,36 +135,36 @@ namespace Negocio
 
         }
 
-        public Articulo buscarPorID(string categoria)
+        public List<Articulo> buscarPorCategoria(string categoria)
         {
+            List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
-
             try
             {
                 datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca WHERE C.NombreCategoria = @Categoria");
                 datos.setearParametro("@Categoria", categoria);
                 datos.abrirConexion();
-
-                if (datos.Lector.Read())
+                while (datos.Lector.Read())
                 {
                     Articulo articulo = new Articulo();
                     articulo.idArticulo = (int)datos.Lector["ID_Articulo"];
                     articulo.nombreArticulo = (string)datos.Lector["NombreArticulo"];
                     articulo.descripcion = (string)datos.Lector["Descripcion"];
                     articulo.categoria = new Categoria();
-                    articulo.categoria.idCategoria = (int)datos.Lector["ID_Categoria"];
                     articulo.categoria.nombreCategoria = (string)datos.Lector["Categoria"];
                     articulo.marca = new Marca();
-                    articulo.marca.idMarca = (int)datos.Lector["ID_Marca"];
                     articulo.marca.nombreMarca = (string)datos.Lector["Marca"];
                     articulo.precio = (decimal)datos.Lector["Precio"];
-                    articulo.stock = (int)datos.Lector["Stock"];
-                    articulo.Estado = (bool)datos.Lector["Estado"];
-                    articulo.listaImagenes = new List<Imagen>(); ;
-
-                    return articulo;
+                    articulo.stock = (int)datos.Lector["stock"];
+                    articulo.listaImagenes = new List<Imagen>();
+                   /* if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Imagenes")))
+                    {
+                        Imagen imagen = new Imagen();
+                        imagen.UrlImagen = (string)datos.Lector["Imagenes"];
+                        articulo.listaImagenes.Add(imagen);
+                    }*/                   lista.Add(articulo);
                 }
-                return null;
+                return lista;
             }
             catch (Exception ex)
             {
@@ -173,7 +174,6 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-
         }
         public int agregar(Articulo nuevo)
         {

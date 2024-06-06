@@ -57,3 +57,7 @@ C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\tp
 C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\tp-TCP-equipo-H\obj\Debug\tp-TCP-equipo-H.csproj.CopyComplete
 C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\tp-TCP-equipo-H\obj\Debug\tp-TCP-equipo-H.dll
 C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\tp-TCP-equipo-H\obj\Debug\tp-TCP-equipo-H.pdb
+C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\tp-TCP-equipo-H\bin\Dominio.dll
+C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\tp-TCP-equipo-H\bin\Negocio.dll
+C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\tp-TCP-equipo-H\bin\Dominio.pdb
+C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\tp-TCP-equipo-H\bin\Negocio.pdb
