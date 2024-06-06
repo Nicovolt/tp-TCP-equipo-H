@@ -13,7 +13,7 @@
              <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<%# ((List<Dominio.Imagen>)Eval("listaImagenes"))[0].UrlImagen %>" class="card-img-top" alt="Imagen del artículo">
                         <div class="card-body">
                             <h5 class="card-title"><%# Eval("NombreArticulo") %></h5>
                             <p class="card-text">Descripcio: <%# Eval("Descripcion") %></p>

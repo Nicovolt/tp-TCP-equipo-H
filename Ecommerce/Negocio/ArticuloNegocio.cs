@@ -141,7 +141,8 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca WHERE C.NombreCategoria = @Categoria");
+                /*datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca WHERE C.NombreCategoria = @Categoria");*/
+                datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, I.ID_Imagen, I.Url_Imagen as ImagenUrl, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca INNER JOIN Imagenes I on I.ID_Imagen = A.ID_Articulo WHERE C.NombreCategoria = @Categoria");
                 datos.setearParametro("@Categoria", categoria);
                 datos.abrirConexion();
                 while (datos.Lector.Read())
@@ -157,12 +158,13 @@ namespace Negocio
                     articulo.precio = (decimal)datos.Lector["Precio"];
                     articulo.stock = (int)datos.Lector["stock"];
                     articulo.listaImagenes = new List<Imagen>();
-                   /* if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Imagenes")))
+                   if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("ImagenUrl")))
                     {
                         Imagen imagen = new Imagen();
-                        imagen.UrlImagen = (string)datos.Lector["Imagenes"];
+                        imagen.UrlImagen = (string)datos.Lector["ImagenUrl"];
                         articulo.listaImagenes.Add(imagen);
-                    }*/                   lista.Add(articulo);
+                    }
+                    lista.Add(articulo);
                 }
                 return lista;
             }
