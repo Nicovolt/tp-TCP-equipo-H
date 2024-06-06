@@ -76,6 +76,7 @@
     <Content Include="Imagenes\Pantalones.jpg" />
     <Content Include="Imagenes\remeras.jpg" />
     <Content Include="Imagenes\sweater.jpg" />
+    <Content Include="Login.aspx" />
     <Content Include="Style.css" />
     <Content Include="StyleM.css" />
     <Content Include="Web.config" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
