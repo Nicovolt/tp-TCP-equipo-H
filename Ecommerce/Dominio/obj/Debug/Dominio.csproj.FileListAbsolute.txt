@@ -4,3 +4,9 @@ C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\Do
 C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.dll
 C:\Users\robie\OneDrive\Escritorio\Programacion III\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\bin\Debug\Dominio.dll
+C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.dll
+C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.pdb

@@ -9,6 +9,41 @@ namespace Negocio
 {
     public class UsuarioNegocio
     {
+
+
+
+
+
+        public bool login(Usuario usuario)
+        {
+            AccesoDatos Datos = new AccesoDatos();
+            try
+            {
+                Datos.setConexion("select ID_Usuario,TipoUser from Usuarios where usuario = @user AND pass = @pass");
+                Datos.setearParametro("@user", usuario.User);
+                Datos.setearParametro("@pass", usuario.Pass);
+                Datos.abrirConexion();
+
+                while (Datos.Lector.Read())
+                {
+                    usuario.idUsuario = (int)Datos.Lector["ID_Usuario"];
+                    usuario.RolUsuario = (int)(Datos.Lector["TipoUser"]) == 2 ? RolUsuario.admin : RolUsuario.normal;
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Datos.cerrarConexion(); 
+            }
+        }
+
+        /*
         public int Logearse(Usuario usuario)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -170,5 +205,6 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        */
     }
 }

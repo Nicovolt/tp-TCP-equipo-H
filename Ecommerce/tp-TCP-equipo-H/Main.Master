@@ -25,7 +25,7 @@
                     <li><a href="Default.aspx">Inicio</a></li>
                     <li><a href="#">Productos</a></li>
                     <li><a href="#">Informacion</a></li>
-                    <li><a href="#">Cuenta</a></li>
+                    <li><a href="Login.aspx">Cuenta</a></li>
                     <li>
                         <a href="CarritoCompras.aspx" runat="server"><i class="fa-solid fa-cart-shopping icono-cart" runat="server"></i></a>
                         <asp:Label ID="Label1" runat="server" Style="color: white;"></asp:Label>
