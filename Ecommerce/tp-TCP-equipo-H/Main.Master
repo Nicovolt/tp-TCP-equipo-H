@@ -1,14 +1,79 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="tp_TCP_equipo_H.Main" %>
 
 <!DOCTYPE html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    .navegacion {
+        width: 100%;
+        margin: 0px auto;
+        color: black;
+        box-shadow: 0 0 6px 0 rgb(0, 0, 0);
+    }
+
+        .navegacion ul {
+            list-style: none;
+            text-align: right;
+        }
+
+    .menu > li {
+        display: inline-block;
+        position: relative;
+    }
+
+        .menu > li > a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: black;
+        }
+    .menu li a:hover{
+        background:darkgray;
+        transition: all .3s;
+    }
+
+    .sudmenu {
+        position: absolute;
+        width: 120%;
+        display: none;
+        background: white;
+        z-index: 1000;
+    }
+
+        .sudmenu li a {
+            display: block;
+            padding: 15px;
+            color: black;
+            text-decoration: none;
+        }
+
+    .menu li:hover .sudmenu {
+        display: block;
+        color: black;
+    }
+
+    .footer {
+        height: 70px;
+        max-width: 1200%;
+        position: relative;
+        color: white;
+        background: black;
+        text-align: center;
+        font-size: 16px;
+        line-height: 60px;
+    }
+</style>
 <html>
 <head runat="server">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-    <link href="Style.css" rel="stylesheet" />
+    <link href="" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -18,19 +83,40 @@
     <form id="form1" runat="server">
         <div>
             <header class="header">
-                <div class="nombre">
-                    <h1>Ecommerce</h1>
-                </div>
-                <menu class="menu">
-                    <li><a href="Default.aspx">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Informacion</a></li>
-                    <li><a href="Login.aspx">Cuenta</a></li>
-                    <li>
-                        <a href="CarritoCompras.aspx" runat="server"><i class="fa-solid fa-cart-shopping icono-cart" runat="server"></i></a>
-                        <asp:Label ID="Label1" runat="server" Style="color: white;"></asp:Label>
-                    </li>
-                </menu>
+                <nav class="navegacion">
+                    <ul class="menu">
+                        <li><a href="Default.aspx">Inicio</a></li>
+                        <li><a href="#">Productos</a>
+                            <ul class="sudmenu">
+                                <li><a href="Articulo.aspx?nombre=Remeras">Remeras</a></li>
+                                <li><a href="Articulo.aspx?nombre=Pantalones">Pantalones</a></li>
+                                <li><a href="Articulo.aspx?nombre=Sweater">Sweater</a></li>
+                                <li><a href="Articulo.aspx?nombre=Buzos">Buzos</a></li>
+                                <li><a href="Articulo.aspx?nombre=Camperas">Camperas</a></li>
+                                <li><a href="Articulo.aspx?nombre=Gafas">Gafas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Informacion</a></li>
+                        <!-- <% if (Session["EsAdmin"] != null && (bool)Session["EsAdmin"])
+                            { %> descomentar cuando este hecho el login
+                        <% } %> mover mas abajo esta linea-->
+                        <li><a href="#">Administrar</a>
+                            <ul class="sudmenu">
+                                <li><a href="#">Nuevo Articulo</a></li>
+                                <li><a href="#">Nueva Categoria</a></li>
+                                <li><a href="#">Nueva Marca</a></li>
+                                <li><a href="#">Modificar Categoria</a></li>
+                                <li><a href="#">Modificar Marca</a></li>
+                                <li><a href="#">Modificar Articulo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Login.aspx">Cuenta</a></li>
+                        <li>
+                            <a href="CarritoCompras.aspx" runat="server"><i class="fa-solid fa-cart-shopping icono-cart" runat="server"></i></a>
+                            <asp:Label ID="Label1" runat="server" Style="color: white;"></asp:Label>
+                        </li>
+                    </ul>
+                </nav>
             </header>
             <section>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
