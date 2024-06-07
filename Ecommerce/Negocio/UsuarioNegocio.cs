@@ -19,7 +19,9 @@ namespace Negocio
             AccesoDatos Datos = new AccesoDatos();
             try
             {
-                Datos.setConexion("select ID_Usuario,TipoUser from Usuarios where usuario = @user AND pass = @pass");
+                //Datos.setConexion("select ID_Usuario,TipoUser from Usuarios where usuario = @user AND pass = @pass");
+                Datos.setConexion("select ID_Usuario, TipoUser from Usuarios where NombreUsuario = @user AND Pass = @pass");
+
                 Datos.setearParametro("@user", usuario.User);
                 Datos.setearParametro("@pass", usuario.Pass);
                 Datos.abrirConexion();

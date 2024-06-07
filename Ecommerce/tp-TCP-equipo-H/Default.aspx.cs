@@ -13,7 +13,12 @@ namespace tp_TCP_equipo_H
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+           /* if (Session["usuario"] == null)
+            {
+                Session.Add("error", "debes loguearte para ingresar");
+                Response.Redirect("Error.aspx",false);
+            }
+           */
         }
     }
 }

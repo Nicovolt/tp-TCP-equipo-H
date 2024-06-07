@@ -26,7 +26,7 @@ namespace tp_TCP_equipo_H
                 if (negocio.login(usuario))
                 {
                     Session.Add("usuario", usuario);
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("Default.aspx", false);
                 }
                 else
                 {
