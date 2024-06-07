@@ -8,7 +8,7 @@
         }
     </style>
     <asp:Label ID="lblArticulo" CssClass="lblArticulo" Text="" runat="server" />
-    <asp:Repeater runat="server" ID="repeaterArticulos">
+    <asp:Repeater runat="server" ID="repeaterArticulos" OnItemCommand="repeaterArticulos_ItemCommand">
         <ItemTemplate>
              <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
@@ -18,8 +18,8 @@
                             <h5 class="card-title"><%# Eval("NombreArticulo") %></h5>
                             <p class="card-text">Descripcio: <%# Eval("Descripcion") %></p>
                             <p class="card-text">Precio: <%# Eval("Precio") %></p>
-                            <asp:Button ID="btnVerDetalle" runat="server" Text="Ver detalle" class="btn btn-primary" />
-                            <asp:Button ID="btnCarrito" runat="server" Text="Agregar al carrito" CssClass="btn btn-success" />
+                            <asp:Button ID="btnVerDetalle" runat="server" CommandName="VerDetalle" CommandArgument='<%# Eval("idArticulo") %>' Text="Ver detalle" CssClass="btn btn-primary" />
+                            <asp:Button ID="btnCarrito" runat="server" CommandName="AgregarCarrito" CommandArgument='<%# Eval("idArticulo") %>' Text="Agregar al carrito" CssClass="btn btn-success" OnCommand="btnCarrito_Click" />
 
                         </div>
                     </div>

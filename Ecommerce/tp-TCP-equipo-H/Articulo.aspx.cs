@@ -34,6 +34,13 @@ namespace tp_TCP_equipo_H
             }
 
         }
-
+        protected void repeaterArticulos_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "VerDetalle")
+            {
+                string articuloID = e.CommandArgument.ToString();
+                Response.Redirect($"DetalleArticulo.aspx?id={articuloID}");
+            }
+        }
     }
 }
