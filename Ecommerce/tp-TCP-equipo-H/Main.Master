@@ -13,6 +13,7 @@
         margin: 0px auto;
         color: black;
         box-shadow: 0 0 6px 0 rgb(0, 0, 0);
+        margin-block-end:50px;
     }
 
         .navegacion ul {
@@ -58,13 +59,14 @@
 
     .footer {
         height: 70px;
-        max-width: 1200%;
+        max-width: auto;
         position: relative;
         color: white;
         background: black;
         text-align: center;
         font-size: 16px;
         line-height: 60px;
+        
     }
 </style>
 <html>
@@ -102,7 +104,7 @@
                         <% } %> mover mas abajo esta linea-->
                         <li><a href="#">Administrar</a>
                             <ul class="sudmenu">
-                                <li><a href="#">Nuevo Articulo</a></li>
+                                <li><a href="NuevoArticulo.aspx">Nuevo Articulo</a></li>
                                 <li><a href="#">Nueva Categoria</a></li>
                                 <li><a href="#">Nueva Marca</a></li>
                                 <li><a href="#">Modificar Categoria</a></li>
