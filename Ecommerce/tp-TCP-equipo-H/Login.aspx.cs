@@ -42,5 +42,38 @@ namespace tp_TCP_equipo_H
                 Response.Redirect("Error.aspx");
             }
         }
-    }
+
+        
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+                UsuarioNegocio negocio = new UsuarioNegocio();
+                Usuario usuario;
+            try
+            {
+
+                usuario = new Usuario(txtNombreDeUsuario.Text, txtContraceña.Text, false, txtNombre.Text, txtApellido.Text, txtMail.Text, txtTelefono.Text);
+                negocio.Registrarse(usuario);
+                if (!negocio.Registrarse(usuario))
+                {
+                   
+                    Response.Redirect("Default.aspx", false);
+                }
+                else
+                {
+                    Session.Add("error", "no se pudo registrar correctamente");
+                    Response.Redirect("Error.aspx", false);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Session.Add("error", ex.ToString());
+                Response.Redirect("Error.aspx");
+            }
+        }
+
+
+     }
 }

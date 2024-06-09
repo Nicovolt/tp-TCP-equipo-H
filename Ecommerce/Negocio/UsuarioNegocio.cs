@@ -45,6 +45,70 @@ namespace Negocio
             }
         }
 
+        public bool Registrarse(Usuario usuario1)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                if (!existeUsuario(usuario1.User))
+                {
+                    datos.setConexion("insert into Usuarios(NombreUsuario,Pass,ID_Rol, Nombre, Apellido, Mail, Telefono) output inserted.ID_Usuario values(@usuarionuevo,@pass,1,@nombre,@apellido,@mail,@telefono)");
+
+                   // datos.setConexion("insert into Usuarios(User,Pass,ID_Rol, Nombre, Apellido, Mail, Telefono,) output inserted.ID_Usuario values(@usuarionuevo,@pass,1,@nombre,@apellido,mail,telefono)");
+                    datos.setearParametro("@usuarionuevo", usuario1.User);
+                    datos.setearParametro("@pass", usuario1.Pass);
+                    datos.setearParametro("@nombre", usuario1.Nombre);
+                    datos.setearParametro("@apellido", usuario1.Apellido);
+                    datos.setearParametro("@mail", usuario1.Mail);
+                    datos.setearParametro("@telefono", usuario1.Telefono);
+                    datos.abrirConexion();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { datos.cerrarConexion(); }
+        }
+      
+        
+        
+        
+        public bool existeUsuario(string nombreUsuario)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setConexion("select COUNT(NombreUsuario) as 'Cantidad' from usuarios where NombreUsuario like @nombreUsuario");
+                datos.setearParametro("@nombreUsuario", nombreUsuario);
+                datos.abrirConexion();
+                while (datos.Lector.Read())
+                {
+                    if ((int)datos.Lector["Cantidad"] == 1)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+        
+        
+        
+        
         /*
         public int Logearse(Usuario usuario)
         {
@@ -86,57 +150,7 @@ namespace Negocio
         }
 
 
-        public bool Registrarse(Usuario usuario1)
-        {
-            AccesoDatos datos = new AccesoDatos();
-            try
-            {
-                if (!existeUsuario(usuario1.nombreUsuario))
-                {
-                    datos.setConexion("insert into Usuarios(NombreUsuario,Pass,ID_Rol) output inserted.ID_Usuario values(@usuarionuevo,@pass,2)");
-                    datos.setearParametro("@usuarionuevo", usuario1.nombreUsuario);
-                    datos.setearParametro("@pass", usuario1.Pass);
-                    datos.abrirConexion();
-                    return true;
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
 
-                throw ex;
-            }
-            finally { datos.cerrarConexion(); }
-        }
-
-        public bool existeUsuario(string nombreUsuario)
-        {
-            AccesoDatos datos = new AccesoDatos();
-            try
-            {
-                datos.setConexion("select COUNT(NombreUsuario) as 'Cantidad' from usuarios where NombreUsuario like @nombreUsuario");
-                datos.setearParametro("@nombreUsuario", nombreUsuario);
-                datos.abrirConexion();
-                while (datos.Lector.Read())
-                {
-                    if ((int)datos.Lector["Cantidad"] == 1)
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-
-        }
 
         public List<Usuario> Listar()
         {

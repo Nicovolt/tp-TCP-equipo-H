@@ -10,3 +10,9 @@ C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Do
 C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.dll
 C:\Users\Nicolas\Documents\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Nicolas\OneDrive\Documentos\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\bin\Debug\Dominio.dll
+C:\Users\Nicolas\OneDrive\Documentos\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Nicolas\OneDrive\Documentos\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Nicolas\OneDrive\Documentos\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas\OneDrive\Documentos\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.dll
+C:\Users\Nicolas\OneDrive\Documentos\GitHub\tp-TCP-equipo-H\Ecommerce\Dominio\obj\Debug\Dominio.pdb
