@@ -79,6 +79,8 @@
     <Content Include="Imagenes\remeras.jpg" />
     <Content Include="Imagenes\sweater.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="NuevaCategoria.aspx" />
+    <Content Include="NuevaMarca.aspx" />
     <Content Include="NuevoArticulo.aspx" />
     <Content Include="Style.css" />
     <Content Include="StyleM.css" />
@@ -129,6 +131,20 @@
     </Compile>
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaCategoria.aspx.cs">
+      <DependentUpon>NuevaCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaCategoria.aspx.designer.cs">
+      <DependentUpon>NuevaCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaMarca.aspx.cs">
+      <DependentUpon>NuevaMarca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaMarca.aspx.designer.cs">
+      <DependentUpon>NuevaMarca.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoArticulo.aspx.cs">
       <DependentUpon>NuevoArticulo.aspx</DependentUpon>

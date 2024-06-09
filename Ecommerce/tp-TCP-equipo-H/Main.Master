@@ -7,6 +7,19 @@
         padding: 0;
         box-sizing: border-box;
     }
+     html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+     .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+      .content {
+            flex: 1;
+        }
 
     .navegacion {
         width: 100%;
@@ -65,6 +78,7 @@
         text-align: center;
         font-size: 16px;
         line-height: 60px;
+        margin-block-start:20px;
     }
 </style>
 <html>
@@ -81,7 +95,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="wrapper">
             <header class="header">
                 <nav class="navegacion">
                     <ul class="menu">
@@ -103,8 +117,8 @@
                         <li><a href="#">Administrar</a>
                             <ul class="sudmenu">
                                 <li><a href="NuevoArticulo.aspx">Nuevo Articulo</a></li>
-                                <li><a href="#">Nueva Categoria</a></li>
-                                <li><a href="#">Nueva Marca</a></li>
+                                <li><a href="NuevaCategoria.aspx">Nueva Categoria</a></li>
+                                <li><a href="NuevaMarca.aspx">Nueva Marca</a></li>
                                 <li><a href="#">Modificar Categoria</a></li>
                                 <li><a href="#">Modificar Marca</a></li>
                                 <li><a href="#">Modificar Articulo</a></li>
@@ -118,14 +132,16 @@
                     </ul>
                 </nav>
             </header>
+            <div class="content">
             <section>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </section>
-            <footer class="footer">
-                <p>Equipo H - Todos los derechos reservados</p>
-            </footer>
+            </div>
         </div>
     </form>
+    <footer class="footer">
+        <p>Equipo H - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
