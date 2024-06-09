@@ -102,7 +102,7 @@
                         <% } %> mover mas abajo esta linea-->
                         <li><a href="#">Administrar</a>
                             <ul class="sudmenu">
-                                <li><a href="#">Nuevo Articulo</a></li>
+                                <li><a href="NuevoArticulo.aspx">Nuevo Articulo</a></li>
                                 <li><a href="#">Nueva Categoria</a></li>
                                 <li><a href="#">Nueva Marca</a></li>
                                 <li><a href="#">Modificar Categoria</a></li>

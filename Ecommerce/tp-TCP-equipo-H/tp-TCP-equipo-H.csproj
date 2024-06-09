@@ -79,6 +79,7 @@
     <Content Include="Imagenes\remeras.jpg" />
     <Content Include="Imagenes\sweater.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="NuevoArticulo.aspx" />
     <Content Include="Style.css" />
     <Content Include="StyleM.css" />
     <Content Include="Web.config" />
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoArticulo.aspx.cs">
+      <DependentUpon>NuevoArticulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoArticulo.aspx.designer.cs">
+      <DependentUpon>NuevoArticulo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
