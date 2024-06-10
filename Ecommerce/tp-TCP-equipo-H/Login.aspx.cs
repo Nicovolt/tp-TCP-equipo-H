@@ -75,5 +75,60 @@ namespace tp_TCP_equipo_H
         }
 
 
-     }
+
+        protected void btnCambiarContra_Click(object sender, EventArgs e)
+        {
+            Usuario usuario;
+            UsuarioNegocio negocio = new UsuarioNegocio();
+            try
+            {
+                usuario = new Usuario(txtNomUsuarioContra.Text, txtContraceñaAntigua.Text, txtContraceñaNueva.Text);
+                negocio.resetContraseña(usuario);
+
+
+            }
+            catch (Exception ex)
+            {
+                Session.Add("error", ex.ToString());
+                Response.Redirect("Error.aspx");
+            }
+        }
+
+        protected void btnCambiarNombreUser_Click(object sender, EventArgs e)
+        {
+            Usuario usuario;
+            UsuarioNegocio negocio = new UsuarioNegocio();
+            try
+            {
+                usuario = new Usuario(txtUserCambio.Text, txtUserNuevo.Text);
+                negocio.resetUsuario(usuario);
+
+
+            }
+            catch (Exception ex)
+            {
+                Session.Add("error", ex.ToString());
+                Response.Redirect("Error.aspx");
+            }
+        }
+
+        protected void btnCambiarGmail_Click(object sender, EventArgs e)
+        {
+            Usuario usuario;
+            UsuarioNegocio negocio = new UsuarioNegocio();
+            try
+            {
+                usuario = new Usuario(txtUserMail.Text, txtGmail.Text, txtGmailNuevo.Text, 1);
+                negocio.resetGmail(usuario);
+
+
+            }
+            catch (Exception ex)
+            {
+                Session.Add("error", ex.ToString());
+                Response.Redirect("Error.aspx");
+            }
+        }
+
+    }
 }

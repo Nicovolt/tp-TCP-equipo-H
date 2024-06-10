@@ -105,52 +105,86 @@ namespace Negocio
             }
 
         }
-        
-        
-        
-        
-        /*
-        public int Logearse(Usuario usuario)
+
+
+
+
+
+        public void resetContraseña(Usuario user)
         {
             AccesoDatos datos = new AccesoDatos();
-
             try
             {
-                datos.setConexion("SELECT ID_Usuario, Nombre, Apellido, Mail, Telefono, FechaNacimiento, ID_Rol,1 FROM Usuarios WHERE NombreUsuario=@nombreUsuario and Pass=@pass");
-                datos.setearParametro("@nombreUsuario", usuario.nombreUsuario);
-                datos.setearParametro("@pass", usuario.Pass);
-                datos.abrirConexion();
-                while (datos.Lector.Read())
-                {
-                    if (usuario.rolUsuario == null)
-                    {
-                        usuario.rolUsuario = new RolUsuario();
-                    }
 
-                    usuario.rolUsuario.idRol = (int)datos.Lector["ID_Rol"];
-                    usuario.idUsuario = (int)datos.Lector["ID_Usuario"];
-
-                    // Comprobar el rol aquí, ajusta según tus necesidades
-                    if (usuario.rolUsuario.idRol > 0)
-                    {
-                        if (usuario.rolUsuario.idRol == 1)
-                        { return 1; }
-                        else { return 2; }
-                    }
-                }
-                return -1;
+                datos.setConexion("update Usuarios set Pass=@NewPass where NombreUsuario=@NombreUsuario and Pass = @OldPass");
+                datos.setearParametro("@NombreUsuario", user.User);
+                datos.setearParametro("@NewPass", user.PassNew);
+                datos.setearParametro("@OldPass", user.Pass);
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
-            finally { datos.cerrarConexion(); }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
+
+        public void resetUsuario(Usuario user)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setConexion("update Usuarios set NombreUsuario=@NewUser where NombreUsuario=@NombreUsuario");
+                datos.setearParametro("@NombreUsuario", user.User);
+                datos.setearParametro("@NewUser", user.UserNew);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
 
 
 
+
+        public void resetGmail(Usuario user)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setConexion("update Usuarios set Mail=@NewMail where NombreUsuario=@NombreUsuario and Mail = @OldMail");
+                datos.setearParametro("@NombreUsuario", user.User);
+                datos.setearParametro("@NewMail", user.MailNew);
+                datos.setearParametro("@OldMail", user.Mail);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
+        /*
+        
 
         public List<Usuario> Listar()
         {
@@ -182,45 +216,7 @@ namespace Negocio
             }
         }
 
-        public void resetContraseña(int idUsuario)
-        {
-            AccesoDatos datos = new AccesoDatos();
-            try
-            {
-                datos.setConexion("update Usuarios set Pass='nuevaClave' where ID_Usuario=@idUsuario");
-                datos.setearParametro("@idUsuario", idUsuario);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }
-
-        public void resetContraseña2(string nombreUsuario)
-        {
-            AccesoDatos datos = new AccesoDatos();
-            try
-            {
-                datos.setConexion("update Usuarios set Pass='nuevaClave' where NombreUsuario=@nombreUsuario");
-                datos.setearParametro("@nombreUsuario", nombreUsuario);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }
+       
         */
     }
 }

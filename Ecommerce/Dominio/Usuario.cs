@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Dominio
 {
 
-     public enum RolUsuario
+    public enum RolUsuario
     {
         normal = 1,
         admin = 2,
@@ -16,21 +16,26 @@ namespace Dominio
     {
         public int idUsuario { get; set; }
         public string User { set; get; }
+        public string UserNew { get; set; }
         public string Pass { get; set; }
+
+        public string PassNew { get; set; }
+
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Mail { get; set; }
+        public string MailNew { get; set; }
         public string Telefono { get; set; }
 
         public RolUsuario RolUsuario { get; set; }
-    
-        
-        
+
+
+
         public Usuario(string user, string pass, bool admin)
         {
             User = user;
             Pass = pass;
-            RolUsuario = admin ? RolUsuario.admin : RolUsuario.normal;  
+            RolUsuario = admin ? RolUsuario.admin : RolUsuario.normal;
         }
 
         public Usuario(string user, string pass, bool admin, string nombre, string apellido, string mail, string telefono)
@@ -42,6 +47,29 @@ namespace Dominio
             Apellido = apellido;
             Mail = mail;
             Telefono = telefono;
+        }
+
+        public Usuario(string user, string pass, string passNueva)
+        {
+
+            User = user;
+            Pass = pass;
+            PassNew = passNueva;
+        }
+
+        public Usuario(string user, string nuevoUser)
+        {
+
+            User = user;
+            UserNew = nuevoUser;
+        }
+
+        public Usuario(string user, string mail, string nuevoMail, int p)
+        {
+
+            User = user;
+            Mail = mail;
+            MailNew = nuevoMail;
         }
     }
 

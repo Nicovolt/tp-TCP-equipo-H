@@ -12,10 +12,15 @@
     </div>
     <div class="mb-3">
         <label class="form-label"> Password </label>
-         <asp:TextBox runat="server" id="txtPassword" placeholder="*****" CssClass ="form-control"/>
+         <asp:TextBox runat="server" id="txtPassword" placeholder="***" CssClass ="form-control"/>
     </div>
     <asp:Button Text="Ingresar" runat="server" id="btnIngresar" OnClick="btnIngresar_Click" />
 </div>
+
+
+
+
+
 
  <div class="col-md-8">
 
@@ -50,4 +55,108 @@
 </div>
 
      </div>
+
+
+
+
+    
+ <div class="col-md-9">
+
+    <div class="col-md-3">
+
+
+         <div class="mb-3"> 
+        <h1>cambiar contraceña</h1> 
+    
+     <label class="form-label">  Nombre de usuario </label>
+     <asp:TextBox runat="server" id="txtNomUsuarioContra" placeholder="" CssClass ="form-control"/>
+ </div>
+
+    <div class="mb-3"> 
+        <label class="form-label"> contraseña antigua </label>
+        <asp:TextBox runat="server" id="txtContraceñaAntigua" placeholder="" CssClass ="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label"> contraceña nueva </label>
+         <asp:TextBox runat="server" id="txtContraceñaNueva"  CssClass ="form-control"/>
+    </div>
+   <asp:Button Text="Cambiar" runat="server" id="btnCambiarContra" onclick="btnCambiarContra_Click" />
+</div>
+
+     </div>
+
+
+
+
+
+
+
+
+
+    <div>
+        <div>
+             <div class="col-md-9">
+
+    <div class="col-md-3">
+
+
+         <div class="mb-3"> 
+        <h1>cambiar nombre de usuario</h1> 
+    
+     <label class="form-label">  Nombre de usuario </label>
+     <asp:TextBox runat="server" id="txtUserCambio" placeholder="" CssClass ="form-control"/>
+ </div>
+
+    <div class="mb-3"> 
+        <label class="form-label"> Nombre de usuario nuevo </label>
+        <asp:TextBox runat="server" id="txtUserNuevo" placeholder="" CssClass ="form-control"/>
+    </div>
+   
+   <asp:Button Text="Cambiar" runat="server" id="btnCambiarNombreUser" onclick="btnCambiarNombreUser_Click" />
+</div>
+
+     </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+        <div>
+        <div>
+             <div class="col-md-9">
+
+    <div class="col-md-3">
+
+
+        <div class="mb-3"> 
+        <h1>cambiar Gmail</h1> 
+    <label class="form-label"> Usuario </label>
+    <asp:TextBox runat="server" id="txtUserMail" placeholder="" CssClass ="form-control"/>
+</div>
+
+         <div class="mb-3"> 
+    
+     <label class="form-label">  Gmail </label>
+     <asp:TextBox runat="server" id="txtGmail" placeholder="" CssClass ="form-control"/>
+ </div>
+
+    <div class="mb-3"> 
+        <label class="form-label"> Gmail nuevo </label>
+        <asp:TextBox runat="server" id="txtGmailNuevo" placeholder="" CssClass ="form-control"/>
+    </div>
+   
+   <asp:Button Text="Cambiar" runat="server" id="btnCambiarGmail" onclick="btnCambiarGmail_Click" />
+</div>
+
+     </div>
+        </div>
+    </div>
+
+
+
 </asp:Content>
