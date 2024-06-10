@@ -40,16 +40,20 @@
                 <label for="formGroupExampleInput2" class="form-label">Categoria</label>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Seleccione la Categoria</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <asp:Repeater runat="server" ID="repeaterCategoria">
+                        <ItemTemplate>
+                            <option value="1"><%# Eval("NombreCategoria") %></option>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </select>
                 <label for="formGroupExampleInput2" class="form-label">Marcar</label>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Seleccione la Marca</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <asp:Repeater runat="server" ID="repeaterMarca">
+                        <ItemTemplate>
+                            <option value="1"><%# Eval("NombreMarca") %></option>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </select>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Precio</label>
