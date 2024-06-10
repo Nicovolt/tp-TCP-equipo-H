@@ -18,7 +18,34 @@ namespace tp_TCP_equipo_H
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-            string Categoria = inpCategoria.Text;
+            string nombreCategoria = inpCategoria.Text;
+
+            if (!string.IsNullOrEmpty(nombreCategoria))
+            {
+                CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+                try
+                {
+                    if (categoriaNegocio.CategoriaExiste(nombreCategoria))
+                    {
+                        Response.Write("<script>alert('La categoría ya existe');</script>");
+                    }
+                    else
+                    {
+                        categoriaNegocio.agregarCategoria(nombreCategoria);
+
+                        Response.Write("<script>alert('Categoría agregada con éxito');</script>");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Response.Write($"<script>alert('Error: {ex.Message}');</script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('El nombre de la categoría no puede estar vacío');</script>");
+            }
         }
     }
 }

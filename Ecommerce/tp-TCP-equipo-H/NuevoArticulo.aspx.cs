@@ -30,5 +30,10 @@ namespace tp_TCP_equipo_H
                 repeaterCategoria.DataBind();
             }
         }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

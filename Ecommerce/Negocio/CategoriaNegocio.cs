@@ -103,5 +103,31 @@ namespace Negocio
                 datos2.cerrarConexion();
             }
         }
+
+        public bool CategoriaExiste(string nombreCategoria)
+        {
+            try
+            {
+                datos.setConexion("SELECT COUNT(*) FROM Categorias WHERE NombreCategoria = @nombreCategoria");
+                datos.setearParametro("@nombreCategoria", nombreCategoria);
+                datos.abrirConexion();
+
+                int count = 0;
+                if (datos.Lector.Read())
+                {
+                    count = (int)datos.Lector[0];
+                }
+
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al verificar si la categoría existe", ex);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

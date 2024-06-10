@@ -31,11 +31,11 @@
                 <h1>Nuevo articulo</h1>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nombre Articulo</label>
-                    <input type="text" class="form-control" id="inpNombreArticulo" placeholder="Nombre del articulo">
+                    <asp:TextBox runat="server" type="text" class="form-control" id="inpNombreArticulo" placeholder="Nombre del articulo"/>
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" id="inpDescripcion" placeholder="Descripcion del articulo">
+                    <asp:TextBox runat="server" type="text" class="form-control" id="inpDescripcion" placeholder="Descripcion del articulo"/>
                 </div>
                 <label for="formGroupExampleInput2" class="form-label">Categoria</label>
                 <select class="form-select" aria-label="Default select example">
@@ -57,11 +57,11 @@
                 </select>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Precio</label>
-                    <input type="text" class="form-control" id="inpPrecio" placeholder="Precio del articulo">
+                    <asp:TextBox runat="server" type="text" class="form-control" id="inpPrecio" placeholder="Precio del articulo"/>
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Stock</label>
-                    <input type="text" class="form-control" id="inpStock" placeholder="Cantidad de articulos">
+                    <asp:TextBox runat="server" type="text" class="form-control" id="inpStock" placeholder="Cantidad de articulos"/>
                 </div>
                 <label for="formGroupExampleInput2" class="form-label">Estado</label>
                 <select class="form-select" aria-label="Default select example">
@@ -78,10 +78,10 @@
                 </select>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Imagen</label>
-                    <input type="text" class="form-control" id="inpImagen" placeholder="Url de la imagen">
+                    <asp:TextBox runat="server" type="text" class="form-control" id="inpImagen" placeholder="Url de la imagen"/>
                 </div>
                 <div>
-                    <asp:Button Text="Agregar" runat="server" CssClass="btn btn-outline-light" />
+                    <asp:Button Text="Agregar" runat="server" CssClass="btn btn-outline-light" OnClick="Unnamed_Click"/>
                 </div>
             </div>
         </section>

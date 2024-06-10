@@ -33,7 +33,7 @@
                     <asp:TextBox type="text" cssclass="form-control" id="inpMarca" placeholder="Nombre de Marca" runat="server"/>
                 </div>
                 <div>
-                    <asp:Button Text="Agregar" runat="server" CssClass="btn btn-outline-light" />
+                    <asp:Button Text="Agregar" runat="server" CssClass="btn btn-outline-light" OnClick="Unnamed_Click"/>
                 </div>
 
             </div>
