@@ -111,10 +111,7 @@
                             </ul>
                         </li>
                         <li><a href="#">Informacion</a></li>
-                        <!-- <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).RolUsuario.Equals("1"))
-                            { %> descomentar cuando este hecho el login
-                        <% } %> mover mas abajo esta linea-->
-                        <li><a href="#">Administrar</a>
+                        <li id="adminMenu" runat="server"><a href="#">Administrar</a>
                             <ul class="sudmenu">
                                 <li><a href="NuevoArticulo.aspx">Nuevo Articulo</a></li>
                                 <li><a href="NuevaCategoria.aspx">Nueva Categoria</a></li>
