@@ -111,7 +111,7 @@
                             </ul>
                         </li>
                         <li><a href="#">Informacion</a></li>
-                        <!-- <% if (Session["EsAdmin"] != null && (bool)Session["EsAdmin"])
+                        <!-- <% if (Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).RolUsuario.Equals("1"))
                             { %> descomentar cuando este hecho el login
                         <% } %> mover mas abajo esta linea-->
                         <li><a href="#">Administrar</a>

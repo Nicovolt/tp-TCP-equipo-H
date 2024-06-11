@@ -9,8 +9,8 @@ namespace Dominio
 
     public enum RolUsuario
     {
-        normal = 1,
-        admin = 2,
+        normal = 2,
+        admin = 1,
     }
     public class Usuario
     {
