@@ -319,7 +319,7 @@ namespace Negocio
             try
             {
                 datos2.setConexion("insert into DetallePedidos(Cantidad,Talle,ID_Articulo,ID_Pedido,Importe) values(@cantidad,@talle,@idArticulo,@idPedido,@importe)");
-                datos2.setearParametro("@cantidad", articulo.cantidad);
+                /*datos2.setearParametro("@cantidad", articulo.cantidad);*/
                 datos2.setearParametro("@talle", articulo.talle);
                 datos2.setearParametro("@idArticulo", articulo.idArticulo);
                 datos2.setearParametro("@idPedido", idPedido);
@@ -344,7 +344,7 @@ namespace Negocio
             try
             {
                 datos2.setConexion("update DetallePedidos set Cantidad=@cantidad,Importe=@importe where ID_Articulo=@idArticulo and Talle like @talle and ID_Pedido=@idPedido");
-                datos2.setearParametro("@cantidad", articulo.cantidad);
+                /*datos2.setearParametro("@cantidad", articulo.cantidad);*/
                 datos2.setearParametro("@talle", articulo.talle);
                 datos2.setearParametro("@idArticulo", articulo.idArticulo);
                 datos2.setearParametro("@idPedido", idPedido);

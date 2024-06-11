@@ -76,9 +76,9 @@ namespace Negocio
                 {
                     Articulo articulo = new Articulo();
                     articulo.idArticulo = (int)datos.Lector["ID_Articulo"];
-                    articulo.cantidad = (int)datos.Lector["Cantidad"];
-                    articulo.talle = (string)datos.Lector["Talle"];
-                    articulo.numeroPedido = (int)datos.Lector["ID_Pedido"];
+                    /*articulo.cantidad = (int)datos.Lector["Cantidad"];*/
+                    articulo.talle = (char)datos.Lector["Talle"];
+                    /*articulo.numeroPedido = (int)datos.Lector["ID_Pedido"];*/
                     articulo.precio = (decimal)datos.Lector["Importe"];
                     articulo.Estado = (bool)datos.Lector["Estado"];
                     lista.Add(articulo);
@@ -129,7 +129,7 @@ namespace Negocio
             {
                 datos.setConexion("update DetallePedidos set Estado=@estado where ID_Pedido=@idPedido and ID_Articulo=@idArticulo and Talle like @talle");
                 datos.setearParametro("@estado", estado);
-                datos.setearParametro("@idPedido", articulo.numeroPedido);
+                /*datos.setearParametro("@idPedido", articulo.numeroPedido);*/
                 datos.setearParametro("@idArticulo", articulo.idArticulo);
                 datos.setearParametro("@talle", articulo.talle);
                 datos.ejecutarAccion();

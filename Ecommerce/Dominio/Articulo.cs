@@ -24,11 +24,7 @@ namespace Dominio
 
         public bool Estado { get; set; }
 
-        public int cantidad { get; set; }
-
-        public string talle { get; set; }
-
-        public int numeroPedido { get; set; }
+        public char talle { get; set; }
 
         public List<Imagen> listaImagenes { get; set; }
     }

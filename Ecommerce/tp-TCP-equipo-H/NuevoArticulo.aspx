@@ -37,24 +37,18 @@
                     <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
                     <asp:TextBox runat="server" type="text" class="form-control" id="inpDescripcion" placeholder="Descripcion del articulo"/>
                 </div>
-                <label for="formGroupExampleInput2" class="form-label">Categoria</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccione la Categoria</option>
-                    <asp:Repeater runat="server" ID="repeaterCategoria">
-                        <ItemTemplate>
-                            <option value="1"><%# Eval("NombreCategoria") %></option>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </select>
-                <label for="formGroupExampleInput2" class="form-label">Marcar</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccione la Marca</option>
-                    <asp:Repeater runat="server" ID="repeaterMarca">
-                        <ItemTemplate>
-                            <option value="1"><%# Eval("NombreMarca") %></option>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </select>
+                <div class="mb-3">
+                    <label for="ddlCategoria" class="form-label">Categoria</label>
+                    <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-select">
+                        <asp:ListItem Text="Seleccione la Categoria" Value="" />
+                    </asp:DropDownList>
+                </div>
+                <div class="mb-3">
+                    <label for="ddlMarca" class="form-label">Marca</label>
+                    <asp:DropDownList runat="server" ID="ddlMarca" CssClass="form-select">
+                        <asp:ListItem Text="Seleccione la Marca" Value="" />
+                    </asp:DropDownList>
+                </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Precio</label>
                     <asp:TextBox runat="server" type="text" class="form-control" id="inpPrecio" placeholder="Precio del articulo"/>
@@ -63,26 +57,31 @@
                     <label for="formGroupExampleInput" class="form-label">Stock</label>
                     <asp:TextBox runat="server" type="text" class="form-control" id="inpStock" placeholder="Cantidad de articulos"/>
                 </div>
-                <label for="formGroupExampleInput2" class="form-label">Estado</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccione El estado</option>
-                    <option value="1">En stock</option>
-                    <option value="2">Sin stock</option>
-                </select>
-                <label for="formGroupExampleInput2" class="form-label">Talla</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccione la Talla</option>
-                    <option value="1">S</option>
-                    <option value="2">M</option>
-                    <option value="3">L</option>
-                </select>
+                <div class="mb-3">
+                    <label for="ddlEstado" class="form-label">Estado</label>
+                    <asp:DropDownList runat="server" ID="ddlEstado" CssClass="form-select">
+                        <asp:ListItem Text="Seleccione El estado" Value="" />
+                        <asp:ListItem Text="En stock" Value="1" />
+                        <asp:ListItem Text="Sin stock" Value="0" />
+                    </asp:DropDownList>
+                </div>
+                <div class="mb-3">
+                    <label for="ddlTalla" class="form-label">Talla</label>
+                    <asp:DropDownList runat="server" ID="ddlTalla" CssClass="form-select">
+                        <asp:ListItem Text="Seleccione la Talla" Value="" />
+                        <asp:ListItem Text="S" Value="S" />
+                    <asp:ListItem Text="M" Value="M" />
+                    <asp:ListItem Text="L" Value="L" />
+                </asp:DropDownList>
+                </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Imagen</label>
-                    <asp:TextBox runat="server" type="text" class="form-control" id="inpImagen" placeholder="Url de la imagen"/>
+                    <asp:TextBox runat="server" type="text" class="form-control" ID="inpImagen" placeholder="Url de la imagen" />
                 </div>
                 <div>
-                    <asp:Button Text="Agregar" runat="server" CssClass="btn btn-outline-light" OnClick="Unnamed_Click"/>
+                    <asp:Button Text="Agregar" runat="server" CssClass="btn btn-outline-light" OnClick="Unnamed_Click" />
                 </div>
+                <asp:Label runat="server" ID="lblError" CssClass="text-danger" />
             </div>
         </section>
 
