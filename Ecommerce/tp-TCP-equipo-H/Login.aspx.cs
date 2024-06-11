@@ -117,7 +117,7 @@ namespace tp_TCP_equipo_H
             Usuario usuario;
             UsuarioNegocio negocio = new UsuarioNegocio();
             try
-            {
+            {                        
                 usuario = new Usuario(txtUserMail.Text, txtGmail.Text, txtGmailNuevo.Text, 1);
                 negocio.resetGmail(usuario);
 
