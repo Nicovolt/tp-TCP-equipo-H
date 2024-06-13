@@ -28,8 +28,12 @@
 
         <section class="contenedor">
             <div class="form-contenedor">
-
-                <h1>Nuevo articulo</h1>
+                <%if (Request.QueryString["id"] != null)
+                    {%>
+                <h1>Modificar articulo</h1>
+               <% }else{%>
+                    <h1>Nuevo articulo</h1>
+               <% }%> 
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nombre Articulo</label>
                     <asp:TextBox runat="server" type="text" class="form-control" id="inpNombreArticulo" placeholder="Nombre del articulo"/>
