@@ -20,7 +20,7 @@ namespace Negocio
             try
             {
                 //Datos.setConexion("select ID_Usuario,TipoUser from Usuarios where usuario = @user AND pass = @pass");
-                Datos.setConexion("select ID_Usuario, TipoUser from Usuarios where NombreUsuario = @user AND Pass = @pass");
+                Datos.setConexion("select * from Usuarios where NombreUsuario = @user AND Pass = @pass");
 
                 Datos.setearParametro("@user", usuario.User);
                 Datos.setearParametro("@pass", usuario.Pass);
@@ -29,7 +29,7 @@ namespace Negocio
                 while (Datos.Lector.Read())
                 {
                     usuario.idUsuario = (int)Datos.Lector["ID_Usuario"];
-                    usuario.RolUsuario = (int)(Datos.Lector["TipoUser"]) == 2 ? RolUsuario.admin : RolUsuario.normal;
+                    usuario.RolUsuario = (int)(Datos.Lector["ID_Rol"]) == 2 ? RolUsuario.admin : RolUsuario.normal;
                     return true;
                 }
                 return false;

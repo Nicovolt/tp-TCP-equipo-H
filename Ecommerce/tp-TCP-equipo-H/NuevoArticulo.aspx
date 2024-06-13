@@ -28,6 +28,7 @@
 
         <section class="contenedor">
             <div class="form-contenedor">
+
                 <h1>Nuevo articulo</h1>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nombre Articulo</label>
