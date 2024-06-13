@@ -71,7 +71,7 @@ namespace Negocio
                     articulo.marca.nombreMarca = (string)datos.Lector["Marca"];
                     articulo.precio = (decimal)datos.Lector["Precio"];
                     articulo.stock = (int)datos.Lector["stock"];
-                    articulo.Estado = bool.Parse(datos.Lector["Estado"].ToString());
+                    articulo.Estado = int.Parse(datos.Lector["Estado"].ToString());
                     articulo.listaImagenes = new List<Imagen>();
                     if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Imagenes")))
                     {
@@ -117,7 +117,7 @@ namespace Negocio
                     articulo.marca.nombreMarca = (string)datos.Lector["Marca"];
                     articulo.precio = (decimal)datos.Lector["Precio"];
                     articulo.stock = (int)datos.Lector["Stock"];
-                    articulo.Estado = (bool)datos.Lector["Estado"];
+                    articulo.Estado = (int)datos.Lector["Estado"];
                     articulo.listaImagenes = new List<Imagen>(); ;
 
                     return articulo;
@@ -158,7 +158,7 @@ namespace Negocio
                     articulo.precio = (decimal)datos.Lector["Precio"];
                     articulo.stock = (int)datos.Lector["stock"];
                     articulo.listaImagenes = new List<Imagen>();
-                   if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("ImagenUrl")))
+                    if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("ImagenUrl")))
                     {
                         Imagen imagen = new Imagen();
                         imagen.UrlImagen = (string)datos.Lector["ImagenUrl"];
@@ -183,13 +183,15 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setConexion("INSERT INTO Articulos (NombreArticulo, Descripcion, Precio, Stock, ID_Categoria, ID_Marca) output inserted.ID_Articulo VALUES (@NombreArticulo, @Descripcion, @Precio, @Stock, @ID_Categoria, @ID_Marca);");
+                datos.setConexion("INSERT INTO Articulos (NombreArticulo, Descripcion, ID_Categoria, ID_Marca, Precio, Stock, Talla, Estado) output inserted.ID_Articulo VALUES (@NombreArticulo, @Descripcion, @ID_Categoria, @ID_Marca, @Precio, @Stock, @Talla, @Estado);");
                 datos.setearParametro("@NombreArticulo", nuevo.nombreArticulo);
                 datos.setearParametro("@Descripcion", nuevo.descripcion);
-                datos.setearParametro("@Precio", nuevo.precio);
-                datos.setearParametro("@Stock", nuevo.stock);
                 datos.setearParametro("@ID_Categoria", nuevo.categoria.idCategoria);
                 datos.setearParametro("@ID_Marca", nuevo.marca.idMarca);
+                datos.setearParametro("@Precio", nuevo.precio);
+                datos.setearParametro("@Stock", nuevo.stock);
+                datos.setearParametro("@Talla", nuevo.talle);
+                datos.setearParametro("@Estado", nuevo.Estado);
                 int ultimaFila = datos.ejecutarAccionConOutput();
                 return ultimaFila;
             }
@@ -209,10 +211,11 @@ namespace Negocio
                 datos.setearParametro("@ID_Articulo", arti.idArticulo);
                 datos.setearParametro("@NombreArticulo", arti.nombreArticulo);
                 datos.setearParametro("@Descripcion", arti.descripcion);
-                datos.setearParametro("@Precio", arti.precio);
-                datos.setearParametro("@Stock", arti.stock);
                 datos.setearParametro("@ID_Categoria", arti.categoria.idCategoria);
                 datos.setearParametro("@ID_Marca", arti.marca.idMarca);
+                datos.setearParametro("@Precio", arti.precio);
+                datos.setearParametro("@Stock", arti.stock);
+                datos.setearParametro("@Talla", arti.talle);
                 datos.setearParametro("@Estado", arti.Estado);
                 datos.ejecutarAccion();
             }

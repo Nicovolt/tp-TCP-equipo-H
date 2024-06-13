@@ -80,7 +80,7 @@ namespace Negocio
                     articulo.talle = (char)datos.Lector["Talle"];
                     /*articulo.numeroPedido = (int)datos.Lector["ID_Pedido"];*/
                     articulo.precio = (decimal)datos.Lector["Importe"];
-                    articulo.Estado = (bool)datos.Lector["Estado"];
+                    articulo.Estado = (int)datos.Lector["Estado"];
                     lista.Add(articulo);
                 }
                 return lista;

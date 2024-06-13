@@ -22,9 +22,8 @@ namespace Dominio
 
         public int stock { get; set; }
 
-        public bool Estado { get; set; }
-
         public char talle { get; set; }
+        public int Estado { get; set; }
 
         public List<Imagen> listaImagenes { get; set; }
     }

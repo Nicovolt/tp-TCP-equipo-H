@@ -31,7 +31,7 @@
                         <td><%# Eval("marca") %></td>
                         <td><%# Eval("precio") %></td>
                         <td><%# Eval("stock") %></td>
-                        <td><%# Eval("talle") %></td>
+                        <td><%# Eval("Talle") %></td>
                         <td><%# Eval("Estado") %></td>
                         <td>
                             <asp:Button ID="btnModificar" runat="server" Text="Modificar" CommandArgument='<%# Eval("idArticulo") %>' CommandName="idModificar" CssClass="btn btn-primary" /></td>

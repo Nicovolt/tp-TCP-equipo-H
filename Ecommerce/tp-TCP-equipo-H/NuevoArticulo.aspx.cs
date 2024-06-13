@@ -18,6 +18,19 @@ namespace tp_TCP_equipo_H
                 CargarCategorias();
                 CargarMarcas();
             }
+            if (Request.QueryString["id"] != null && !IsPostBack)
+            {
+                ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+                Dominio.Articulo articulo = articuloNegocio.buscarPorID(int.Parse(Request.QueryString["id"]));
+                inpNombreArticulo.Text = articulo.nombreArticulo;
+                inpDescripcion.Text = articulo.descripcion;
+                ddlCategoria.SelectedValue = articulo.categoria.idCategoria.ToString();
+                ddlMarca.SelectedValue = articulo.marca.idMarca.ToString();
+                inpPrecio.Text = articulo.precio.ToString();
+                inpStock.Text = articulo.stock.ToString();
+                ddlEstado.SelectedValue = articulo.Estado.ToString();
+                ddlTalla.SelectedValue = articulo.talle.ToString();
+            }
         }
         private void CargarCategorias()
         {
@@ -55,7 +68,6 @@ namespace tp_TCP_equipo_H
                 return;
             }
 
-            // Crear nuevo artículo
             Dominio.Articulo nuevoArticulo = new Dominio.Articulo();
             {
                 nuevoArticulo.nombreArticulo = inpNombreArticulo.Text;
@@ -64,7 +76,7 @@ namespace tp_TCP_equipo_H
                 nuevoArticulo.marca = new Marca { idMarca = int.Parse(ddlMarca.SelectedValue) };
                 nuevoArticulo.precio = decimal.Parse(inpPrecio.Text);
                 nuevoArticulo.stock = int.Parse(inpStock.Text);
-                nuevoArticulo.Estado = ddlEstado.SelectedValue == "1";
+                nuevoArticulo.Estado = int.Parse(ddlEstado.SelectedValue);
                 nuevoArticulo.talle = char.Parse(ddlTalla.SelectedValue);
                 nuevoArticulo.listaImagenes = new List<Imagen>
                 {
@@ -75,7 +87,20 @@ namespace tp_TCP_equipo_H
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
-                int idArticulo = articuloNegocio.agregar(nuevoArticulo);
+                ImagenNegocio imagenNegocio = new ImagenNegocio();
+                int idArticulo = 0;
+                if (Request.QueryString["id"] != null)
+                {
+                    idArticulo = int.Parse(Request.QueryString["id"]);
+                    nuevoArticulo.idArticulo = idArticulo;
+                    articuloNegocio.modificarConSP(nuevoArticulo);
+                    Response.Redirect("ModificarArticulo.aspx", false);
+                    imagenNegocio.GuardarImagen(inpImagen.Text, idArticulo);
+                }
+                else
+                {
+                    idArticulo = articuloNegocio.agregar(nuevoArticulo);
+                }
                 if (idArticulo > 0)
                 {
                     inpNombreArticulo.Text = "";
