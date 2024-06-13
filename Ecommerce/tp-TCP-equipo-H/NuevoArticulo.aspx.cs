@@ -77,7 +77,7 @@ namespace tp_TCP_equipo_H
                 nuevoArticulo.precio = decimal.Parse(inpPrecio.Text);
                 nuevoArticulo.stock = int.Parse(inpStock.Text);
                 nuevoArticulo.Estado = int.Parse(ddlEstado.SelectedValue);
-                nuevoArticulo.talle = char.Parse(ddlTalla.SelectedValue);
+                nuevoArticulo.talle = ddlTalla.SelectedValue;
                 nuevoArticulo.listaImagenes = new List<Imagen>
                 {
                     new Imagen { UrlImagen = inpImagen.Text }

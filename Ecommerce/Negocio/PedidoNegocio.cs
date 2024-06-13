@@ -77,7 +77,7 @@ namespace Negocio
                     Articulo articulo = new Articulo();
                     articulo.idArticulo = (int)datos.Lector["ID_Articulo"];
                     /*articulo.cantidad = (int)datos.Lector["Cantidad"];*/
-                    articulo.talle = (char)datos.Lector["Talle"];
+                    articulo.talle = (string)datos.Lector["Talle"];
                     /*articulo.numeroPedido = (int)datos.Lector["ID_Pedido"];*/
                     articulo.precio = (decimal)datos.Lector["Importe"];
                     articulo.Estado = (int)datos.Lector["Estado"];

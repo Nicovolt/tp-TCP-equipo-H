@@ -1,6 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="tp_TCP_equipo_H.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        .contenedor {
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+            .contenedor > hi {
+                align-content: center;
+            }
+
+        .form-contenedor {
+            width: 100%;
+            max-width: 450px;
+            background:linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+            border-radius: 15px;
+            color: white;
+            padding: 50px 60px 70px;
+        }
+
         .mb-3 {
             margin-bottom: 1rem;
         }
@@ -29,8 +49,7 @@
             font-size: 1rem;
             line-height: 1.5;
             border-radius: 0.25rem;
-            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
 
         .btn-primary {
@@ -39,26 +58,30 @@
             border-color: #007bff;
         }
 
-        .btn-primary:hover {
-            color: #fff;
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
+            .btn-primary:hover {
+                color: #fff;
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-md-6">
-        <div class="mb-3" cssclas="form-floating mb-3">
+    <section class="contenedor">
+        <div class="form-contenedor">
             <h1>Ingresar</h1>
-            <label class="form-label">User</label>
-            <asp:TextBox runat="server" ID="txtUser" placeholder="User Name" CssClass="form-control" />
-        </div>
+            <div class="mb-3">            
+              <label class="form-label">User</label>
+              <asp:TextBox runat="server" ID="txtUser" placeholder="User Name" CssClass="form-control" />
+            </div>
         <div class="mb-3" cssclas="form-floating mb-3">
             <label class="form-label">Password</label>
             <asp:TextBox runat="server" ID="txtPassword" placeholder="Password" CssClass="form-control" />
+            </div>
+        <div>
+            <asp:Button Text="Ingresar" runat="server" ID="btnIngresar" OnClick="btnIngresar_Click" CssClass="btn btn-outline-light" />
         </div>
-        <asp:Button Text="Ingresar" runat="server" ID="btnIngresar" OnClick="btnIngresar_Click" CssClass="btn btn-primary" />
-    </div>
+       </div>        
+    </section>
 
     <div class="col-md-8">
         <div class="col-md-6">
