@@ -80,6 +80,8 @@
     <Content Include="Imagenes\sweater.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="ModificarArticulo.aspx" />
+    <Content Include="ModificarCategoria.aspx" />
+    <Content Include="ModificarMarca.aspx" />
     <Content Include="NuevaCategoria.aspx" />
     <Content Include="NuevaMarca.aspx" />
     <Content Include="NuevoArticulo.aspx" />
@@ -139,6 +141,20 @@
     </Compile>
     <Compile Include="ModificarArticulo.aspx.designer.cs">
       <DependentUpon>ModificarArticulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarCategoria.aspx.cs">
+      <DependentUpon>ModificarCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarCategoria.aspx.designer.cs">
+      <DependentUpon>ModificarCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMarca.aspx.cs">
+      <DependentUpon>ModificarMarca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarMarca.aspx.designer.cs">
+      <DependentUpon>ModificarMarca.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevaCategoria.aspx.cs">
       <DependentUpon>NuevaCategoria.aspx</DependentUpon>

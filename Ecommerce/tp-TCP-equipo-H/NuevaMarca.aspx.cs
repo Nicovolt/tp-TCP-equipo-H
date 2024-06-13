@@ -12,12 +12,18 @@ namespace tp_TCP_equipo_H
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["id"] != null && !IsPostBack)
+            {
+                MarcaNegocio marcaNegocio = new MarcaNegocio();
+                Dominio.Marca marca = marcaNegocio.listarMarcaPorId(int.Parse(Request.QueryString["id"]));
+                textMarca.Text = marca.nombreMarca;
+            }
 
         }
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-            string nombreMarca = inpMarca.Text;
+            string nombreMarca = textMarca.Text;
 
             if (!string.IsNullOrEmpty(nombreMarca))
             {
@@ -25,16 +31,28 @@ namespace tp_TCP_equipo_H
 
                 try
                 {
-                    if (marcaNegocio.MarcaExiste(nombreMarca))
+                    if (Request.QueryString["id"] != null)
                     {
-                        Response.Write("<script>alert('La marca ya existe');</script>");
+                        string nuevoNombre = textMarca.Text;
+                        int numeroId = int.Parse(Request.QueryString["id"]);
+                        marcaNegocio.modificarMarca(numeroId, nuevoNombre);
+                        Response.Write("<script>alert('Marca se modifico con éxito');</script>");
                     }
                     else
                     {
-                        marcaNegocio.agregarMarca(nombreMarca);
+                        if (marcaNegocio.MarcaExiste(nombreMarca))
+                        {
+                            Response.Write("<script>alert('La marca ya existe');</script>");
+                        }
+                        else
+                        {
+                            marcaNegocio.agregarMarca(nombreMarca);
 
-                        Response.Write("<script>alert('Marca agregada con éxito');</script>");
+                            Response.Write("<script>alert('Marca agregada con éxito');</script>");
+                        }
                     }
+                    
+
                 }
                 catch (Exception ex)
                 {

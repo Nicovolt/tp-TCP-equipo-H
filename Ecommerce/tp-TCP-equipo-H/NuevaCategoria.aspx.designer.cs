@@ -15,12 +15,12 @@ namespace tp_TCP_equipo_H
     {
 
         /// <summary>
-        /// Control inpCategoria.
+        /// Control textCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inpCategoria;
+        protected global::System.Web.UI.WebControls.TextBox textCategoria;
     }
 }

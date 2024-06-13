@@ -27,10 +27,17 @@
 
         <section class="contenedor">
             <div class="form-contenedor">
+                <%if (Request.QueryString["id"] != null)
+                    {%>
+                <h1>Modificar Marca</h1>
+                <% }
+                else
+                {%>
                 <h1>Nueva Marca</h1>
+                <% }%>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nombre Marca</label>
-                    <asp:TextBox type="text" cssclass="form-control" id="inpMarca" placeholder="Nombre de Marca" runat="server"/>
+                    <asp:TextBox type="text" cssclass="form-control" id="textMarca" placeholder="Nombre de Marca" runat="server"/>
                 </div>
                 <div>
                     <asp:Button Text="Agregar" runat="server" CssClass="btn btn-outline-light" OnClick="Unnamed_Click"/>

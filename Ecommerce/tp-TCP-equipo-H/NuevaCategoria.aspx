@@ -28,10 +28,17 @@
 
         <section class="contenedor">
             <div class="form-contenedor">
+                <%if (Request.QueryString["id"] != null)
+                    {%>
+                <h1>Modificar Categoria</h1>
+                <% }
+                else
+                {%>
                 <h1>Nueva Categoria</h1>
+                <% }%>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nombre Categoria</label>
-                    <asp:TextBox type="text" class="form-control" id="inpCategoria" placeholder="Nombre de categoria" runat="server"/>
+                    <asp:TextBox type="text" class="form-control" id="textCategoria" placeholder="Nombre de categoria" runat="server"/>
                 </div>
                 <div>
                     <asp:Button Text="Agregar" runat="server" CssClass="btn btn-outline-light" OnClick="Unnamed_Click"/>

@@ -116,8 +116,8 @@
                                 <li><a href="NuevoArticulo.aspx">Nuevo Articulo</a></li>
                                 <li><a href="NuevaCategoria.aspx">Nueva Categoria</a></li>
                                 <li><a href="NuevaMarca.aspx">Nueva Marca</a></li>
-                                <li><a href="#">Modificar Categoria</a></li>
-                                <li><a href="#">Modificar Marca</a></li>
+                                <li><a href="ModificarCategoria.aspx">Modificar Categoria</a></li>
+                                <li><a href="ModificarMarca.aspx">Modificar Marca</a></li>
                                 <li><a href="ModificarArticulo.aspx">Modificar Articulo</a></li>
                             </ul>
                         </li>
