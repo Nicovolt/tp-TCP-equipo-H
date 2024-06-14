@@ -11,7 +11,19 @@ namespace tp_TCP_equipo_H
 {
     public partial class DetalleArticulo : System.Web.UI.Page
     {
-        
+        private ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+        private int ObtenerElIdDelArticuloDesdeLaURL()
+        {
+            int idArticulo = -1;
+            if (Request.QueryString["id"] != null)
+            {
+                if (int.TryParse(Request.QueryString["id"], out idArticulo))
+                {
+                    // ID válido en la URL.
+                }
+            }
+            return idArticulo;
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -38,7 +50,37 @@ namespace tp_TCP_equipo_H
 
         protected void btnCarrito_Click(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["CarritoCompras"] == null)
+                {
+                    List<Articulo> Newcarrito = new List<Articulo>();
+                    Session["CarritoCompras"] = Newcarrito;
+                }
+            }
+            int id = ObtenerElIdDelArticuloDesdeLaURL();
+            if (id > 0)
+            {
+                Dominio.Articulo articulo = articuloNegocio.buscarPorID(id);
 
+                if (articulo != null)
+                {
+                    List<Dominio.Articulo> carrito = Session["CarritoCompras"] as List<Dominio.Articulo>;
+                    if (carrito == null)
+                    {
+                        carrito = new List<Dominio.Articulo>();
+                    }
+                    carrito.Add(articulo);
+                    Session["CarritoCompras"] = carrito;
+
+                    List<Dominio.Articulo> carritoActual = (List<Dominio.Articulo>)Session["CarritoCompras"];
+                    int cantArticulos = carritoActual.Count;
+
+
+                    Main masterPage = (Main)this.Master;
+                    masterPage.ActualizarContadorCarrito(cantArticulos);
+                }
+            }
         }
     }
 }

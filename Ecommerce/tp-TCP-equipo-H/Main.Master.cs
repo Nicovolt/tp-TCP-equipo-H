@@ -13,6 +13,8 @@ namespace tp_TCP_equipo_H
         {
             if (!IsPostBack)
             {
+                List<Dominio.Articulo> carritoActual = (List<Dominio.Articulo>)Session["CarritoCompras"];
+                int cantArticulos = carritoActual != null ? carritoActual.Count : 0;
                 Dominio.Usuario usuario = (Dominio.Usuario)Session["usuario"];
                 if (usuario != null && usuario.RolUsuario == Dominio.RolUsuario.admin)
                 {
@@ -22,7 +24,13 @@ namespace tp_TCP_equipo_H
                 {
                     adminMenu.Visible = false;
                 }
+                ActualizarContadorCarrito(cantArticulos);
+
             }
+        }
+        public void ActualizarContadorCarrito(int contador)
+        {
+            Label1.Text = contador.ToString();
         }
     }
 }
