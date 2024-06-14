@@ -66,54 +66,11 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="contenedor">
-        <div class="form-contenedor">
-            <h1>Ingresar</h1>
-            <div class="mb-3">            
-              <label class="form-label">User</label>
-              <asp:TextBox runat="server" ID="txtUser" placeholder="User Name" CssClass="form-control" />
-            </div>
-        <div class="mb-3" cssclas="form-floating mb-3">
-            <label class="form-label">Password</label>
-            <asp:TextBox runat="server" ID="txtPassword" placeholder="Password" CssClass="form-control" />
-            </div>
-        <div>
-            <asp:Button Text="Ingresar" runat="server" ID="btnIngresar" OnClick="btnIngresar_Click" CssClass="btn btn-outline-light" />
-        </div>
-       </div>        
-    </section>
-
-    <div class="col-md-8">
-        <div class="col-md-6">
-            <div class="mb-3" cssclas="form-floating mb-3">
-                <h1>Registrar</h1>
-                <label class="form-label">Nombre</label>
-                <asp:TextBox runat="server" ID="txtNombre" placeholder="" CssClass="form-control" />
-            </div>
-            <div class="mb-3" cssclas="form-floating mb-3">
-                <label class="form-label">Apellido</label>
-                <asp:TextBox runat="server" ID="txtApellido" CssClass="form-control" />
-            </div>
-            <div class="mb-3" cssclas="form-floating mb-3">
-                <label class="form-label">Mail</label>
-                <asp:TextBox runat="server" ID="txtMail" CssClass="form-control" />
-            </div>
-            <div class="mb-3" cssclas="form-floating mb-3">
-                <label class="form-label">Telefono</label>
-                <asp:TextBox runat="server" ID="txtTelefono" CssClass="form-control" />
-            </div>
-            <div class="mb-3" cssclas="form-floating mb-3">
-                <label class="form-label">Nombre de usuario</label>
-                <asp:TextBox runat="server" ID="txtNombreDeUsuario" CssClass="form-control" />
-            </div>
-            <div class="mb-3" cssclas="form-floating mb-3">
-                <label class="form-label">Contraseña</label>
-                <asp:TextBox runat="server" ID="txtContraceña" CssClass="form-control" />
-            </div>
-            <asp:Button Text="Registrar" runat="server" ID="btnRegistrar" onclick="btnRegistrar_Click" CssClass="btn btn-primary" />
-        </div>
-    </div>
-
+    
+    
+     <%if (Session["usuario"] != null)
+ {%>
+    
     <div class="col-md-9">
         <div class="col-md-3">
             <div class="mb-3" cssclas="form-floating mb-3">
@@ -166,4 +123,72 @@
             <asp:Button Text="Cambiar" runat="server" ID="btnCambiarGmail" onclick="btnCambiarGmail_Click" CssClass="btn btn-primary" />
         </div>
     </div>
+    
+   
+ <% }%>
+                   
+ <% else
+ {%>
+   
+
+
+
+
+    <section class="contenedor">
+        <div class="form-contenedor">
+            <h1>Ingresar</h1>
+            <div class="mb-3">            
+              <label class="form-label">User</label>
+              <asp:TextBox runat="server" ID="txtUser" placeholder="User Name" CssClass="form-control" />
+            </div>
+        <div class="mb-3" cssclas="form-floating mb-3">
+            <label class="form-label">Password</label>
+            <asp:TextBox runat="server" ID="txtPassword" placeholder="Password" CssClass="form-control" />
+            </div>
+        <div>
+            <asp:Button Text="Ingresar" runat="server" ID="btnIngresar" OnClick="btnIngresar_Click" CssClass="btn btn-outline-light" />
+        </div>
+       </div>  
+        </section>
+
+    <div class="col-md-8">
+        <div class="form-contenedor">
+            <div class="mb-3" cssclas="form-floating mb-3">
+                <h1>Registrar</h1>
+                <label class="form-label">Nombre</label>
+                <asp:TextBox runat="server" ID="txtNombre" placeholder="" CssClass="form-control" />
+            </div>
+            <div class="mb-3" cssclas="form-floating mb-3">
+                <label class="form-label">Apellido</label>
+                <asp:TextBox runat="server" ID="txtApellido" CssClass="form-control" />
+            </div>
+            <div class="mb-3" cssclas="form-floating mb-3">
+                <label class="form-label">Mail</label>
+                <asp:TextBox runat="server" ID="txtMail" CssClass="form-control" />
+            </div>
+            <div class="mb-3" cssclas="form-floating mb-3">
+                <label class="form-label">Telefono</label>
+                <asp:TextBox runat="server" ID="txtTelefono" CssClass="form-control" />
+            </div>
+            <div class="mb-3" cssclas="form-floating mb-3">
+                <label class="form-label">Nombre de usuario</label>
+                <asp:TextBox runat="server" ID="txtNombreDeUsuario" CssClass="form-control" />
+            </div>
+            <div class="mb-3" cssclas="form-floating mb-3">
+                <label class="form-label">Contraseña</label>
+                <asp:TextBox runat="server" ID="txtContraceña" CssClass="form-control" />
+            </div>
+            <asp:Button Text="Registrar" runat="server" ID="btnRegistrar" onclick="btnRegistrar_Click" CssClass="btn btn-primary" />
+        </div>
+    </div>
+
+ <% } %>
+    
+    
+    
+    
+    
+    
+    
+
 </asp:Content>

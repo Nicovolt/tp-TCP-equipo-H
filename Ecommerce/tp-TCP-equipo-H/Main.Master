@@ -166,7 +166,27 @@
                                 <li><a href="ModificarArticulo.aspx">Modificar Articulo</a></li>
                             </ul>
                         </li>
-                        <li><a href="Login.aspx">Cuenta</a></li>
+                        <%if (Session["usuario"] != null)
+                          {%>
+     
+                            <li><a href="Login.aspx"><i class="bi bi-person-gear" runat="server"></i>Administrar Cuenta</a></li>
+    
+                        <%}%>
+                   
+                       <% else
+                          {%>
+                           <li><a href="Login.aspx"><i class="bi bi-person-fill-exclamation" runat="server"></i>Ingresar Cuenta</a></li>
+
+                       <% } %>
+               
+                     
+                           <%if (Session["usuario"] != null)
+                             {%>
+    
+                              <asp:Button Text="Cerrar cuenta" runat="server" OnClick="Unnamed_Click" />
+    
+   
+                           <%}%>
                         <li class="cart">
                             <a href="CarritoCompras.aspx" runat="server"><i class="fa-solid fa-cart-shopping icono-cart" runat="server"></i></a>
                             <asp:Label ID="Label1" runat="server" CssClass="cart-label"></asp:Label>

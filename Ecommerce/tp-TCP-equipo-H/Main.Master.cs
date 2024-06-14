@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -31,6 +32,11 @@ namespace tp_TCP_equipo_H
         public void ActualizarContadorCarrito(int contador)
         {
             Label1.Text = contador.ToString();
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            Session["usuario"] = null;
         }
     }
 }
