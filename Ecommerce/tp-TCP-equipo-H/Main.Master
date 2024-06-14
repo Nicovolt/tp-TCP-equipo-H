@@ -7,23 +7,26 @@
         padding: 0;
         box-sizing: border-box;
     }
-     html, body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-     .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-      .content {
-            flex: 1;
-        }
+
+    html, body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .content {
+        flex: 1;
+    }
 
     .navegacion {
         width: 100%;
-        margin: 0px auto;
+        margin: 0 auto;
         background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
         color: white;
         box-shadow: 0 0 6px 0 rgb(0, 0, 0);
@@ -32,10 +35,15 @@
         .navegacion ul {
             list-style: none;
             text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0;
         }
 
     .menu > li {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         position: relative;
     }
 
@@ -45,42 +53,78 @@
             text-decoration: none;
             color: black;
         }
-    .menu li a:hover{
-        background:white;
+
+    .menu li a:hover {
+        background: white;
         transition: all .3s;
     }
 
     .sudmenu {
         position: absolute;
-        width: 120%;
-        display: none;
+        left: 0;
+        top: 100%;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
         background: white;
         z-index: 1000;
+        transition: opacity 0.3s, visibility 0.3s;
     }
 
-        .sudmenu li a {
-            display: block;
-            padding: 15px;
-            color: black;
-            text-decoration: none;
+        .sudmenu li {
+            width: 100%;
         }
 
+            .sudmenu li a {
+                display: block;
+                padding: 15px;
+                color: black;
+                text-decoration: none;
+            }
+
     .menu li:hover .sudmenu {
-        display: block;
-        color: black;
+        visibility: visible;
+        opacity: 1;
     }
 
     .footer {
         height: 70px;
-        max-width: 1200%;
+        width: 100%;
         position: relative;
         color: white;
-        background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);;
+        background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
         text-align: center;
         font-size: 16px;
-        line-height: 60px;
-        margin-block-start:20px;
+        line-height: 70px;
+        margin-top: 20px;
     }
+
+    .icono-cart {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .menu li.cart {
+        display: inline-flex;
+        align-items: center;
+    }
+
+        .menu li.cart a {
+            display: inline-flex;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+        }
+
+            .menu li.cart a:hover {
+                background: white;
+                transition: all .3s;
+            }
+
+        .menu li.cart .cart-label {
+            color: white;
+        }
 </style>
 <html>
 <head runat="server">
@@ -123,18 +167,18 @@
                             </ul>
                         </li>
                         <li><a href="Login.aspx">Cuenta</a></li>
-                        <li>
+                        <li class="cart">
                             <a href="CarritoCompras.aspx" runat="server"><i class="fa-solid fa-cart-shopping icono-cart" runat="server"></i></a>
-                            <asp:Label ID="Label1" runat="server" Style="color: white;"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" CssClass="cart-label"></asp:Label>
                         </li>
                     </ul>
                 </nav>
             </header>
             <div class="content">
-            <section>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </section>
+                <section>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
             </div>
         </div>
     </form>
