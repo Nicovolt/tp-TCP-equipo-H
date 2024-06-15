@@ -183,7 +183,7 @@
                            <%if (Session["usuario"] != null)
                              {%>
     
-                              <asp:Button Text="Cerrar cuenta" runat="server" OnClick="Unnamed_Click" />
+                              <asp:Button Text="Cerrar cuenta" runat="server" class="btn btn-danger" OnClick="Unnamed_Click" />
     
    
                            <%}%>

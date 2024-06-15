@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\main.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\main.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFF4B624-1A98-4FA7-AE1C-BAC788FBCB02}|Dominio\\Dominio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFF4B624-1A98-4FA7-AE1C-BAC788FBCB02}|Dominio\\Dominio.csproj|solutionrelative:dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\main.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\main.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,24 +46,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AccesoDatos.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\AccesoDatos.cs",
               "RelativeDocumentMoniker": "Negocio\\AccesoDatos.cs",
               "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\AccesoDatos.cs",
               "RelativeToolTip": "Negocio\\AccesoDatos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T20:13:19.98Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Main.Master.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Main.Master.cs",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Main.Master.cs",
@@ -71,12 +71,11 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\Main.Master.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAAAB8AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T20:11:27.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T20:11:27.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "UsuarioNegocio.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\UsuarioNegocio.cs",
               "RelativeDocumentMoniker": "Negocio\\UsuarioNegocio.cs",
@@ -84,24 +83,25 @@
               "RelativeToolTip": "Negocio\\UsuarioNegocio.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAAAwEoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:31:57.336Z"
+              "WhenOpened": "2024-06-11T17:31:57.336Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Dominio\\Usuario.cs",
               "RelativeDocumentMoniker": "Dominio\\Usuario.cs",
               "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Dominio\\Usuario.cs",
               "RelativeToolTip": "Dominio\\Usuario.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAmwEkAAAAFAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAQwEkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T18:45:28.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Login.aspx.cs",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Login.aspx.cs",
@@ -109,12 +109,11 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\Login.aspx.cs",
               "ViewState": "AQIAAGsAAAAAAAAAAAAvwHcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T20:47:59.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T20:47:59.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Login.aspx",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Login.aspx",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Login.aspx",
@@ -127,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Default.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Default.aspx.cs",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Default.aspx.cs",
@@ -139,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Default.aspx",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Default.aspx",
@@ -151,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Main.Master",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Main.Master",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Main.Master",
