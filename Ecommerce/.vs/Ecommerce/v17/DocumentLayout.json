@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\detallearticulo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\detallearticulo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\negocio\\categorianegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,6 +13,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\detallearticulo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\detallearticulo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -39,7 +39,7 @@
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\carritocompras.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\detallearticulo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\detallearticulo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\detallearticulo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -86,11 +86,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "DetalleArticulo.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\DetalleArticulo.aspx.cs",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\DetalleArticulo.aspx.cs",
@@ -111,8 +111,7 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\DetalleArticulo.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-16T21:20:28.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T21:20:28.985Z"
             },
             {
               "$type": "Document",
@@ -148,8 +147,7 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\CarritoCompras.aspx.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAIAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T11:52:44.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T11:52:44.421Z"
             },
             {
               "$type": "Document",
@@ -161,8 +159,7 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\CarritoCompras.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-16T11:52:03.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T11:52:03.827Z"
             },
             {
               "$type": "Document",
@@ -178,52 +175,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ArticuloNegocio.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\ArticuloNegocio.cs",
               "RelativeDocumentMoniker": "Negocio\\ArticuloNegocio.cs",
               "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\ArticuloNegocio.cs",
               "RelativeToolTip": "Negocio\\ArticuloNegocio.cs",
-              "ViewState": "AQIAAG0BAAAAAAAAAADwv30BAABFAAAA",
+              "ViewState": "AQIAAG0BAAAAAAAAAADwv3kBAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T11:42:36.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MarcaNegocio.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\MarcaNegocio.cs",
               "RelativeDocumentMoniker": "Negocio\\MarcaNegocio.cs",
               "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\MarcaNegocio.cs",
               "RelativeToolTip": "Negocio\\MarcaNegocio.cs",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAmwI0AAABFAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAmwI0AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T11:41:56.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "CategoriaNegocio.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\CategoriaNegocio.cs",
               "RelativeDocumentMoniker": "Negocio\\CategoriaNegocio.cs",
               "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\CategoriaNegocio.cs",
               "RelativeToolTip": "Negocio\\CategoriaNegocio.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAcwI4AAABFAAAA",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAcwI4AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T11:40:48.264Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AccesoDatos.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\AccesoDatos.cs",
               "RelativeDocumentMoniker": "Negocio\\AccesoDatos.cs",
               "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\AccesoDatos.cs",
               "RelativeToolTip": "Negocio\\AccesoDatos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T20:13:19.98Z",
               "EditorCaption": ""
@@ -278,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Login.aspx",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Login.aspx",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Login.aspx",
@@ -286,8 +283,7 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-06T20:47:45.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T20:47:45.272Z"
             },
             {
               "$type": "Document",
@@ -311,8 +307,7 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-07T18:07:58.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T18:07:58.387Z"
             },
             {
               "$type": "Document",
@@ -324,8 +319,7 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\Main.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-04T01:41:51.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T01:41:51.534Z"
             }
           ]
         }

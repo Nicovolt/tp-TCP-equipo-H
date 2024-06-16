@@ -379,7 +379,7 @@ namespace Negocio
 
             try
             {
-                connection.ConnectionString = "server=.\\SQLEXPRESS02; database=Ecommerce; integrated security=true";
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=Ecommerce; integrated security=true";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.CommandText = "SELECT * FROM [dbo].[Articulos] WHERE ID_Articulo = @Id";
                 cmd.Parameters.AddWithValue("@Id", Id);
