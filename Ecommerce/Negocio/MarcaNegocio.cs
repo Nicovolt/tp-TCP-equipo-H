@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,7 +109,7 @@ namespace Negocio
             }
         }
 
-            public void agregarMarca(string nuevaMarca)
+        public void agregarMarca(string nuevaMarca)
         {
             AccesoDatos datos2 = new AccesoDatos();
             try
@@ -125,6 +126,52 @@ namespace Negocio
             finally
             {
                 datos2.cerrarConexion();
+            }
+        }
+
+
+        public string obtener(int id)
+        {
+            string marcaName;
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader = null;
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=Ecommerce; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "SELECT * FROM [dbo].[Marcas] WHERE ID_Marca = @id";
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Connection = connection;
+
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    marcaName = (string)reader["NombreMarca"];
+                }
+                else
+                {
+                    marcaName = "N/A";
+                }
+
+                return marcaName;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+
+                connection.Close();
             }
         }
     }

@@ -26,5 +26,7 @@ namespace Dominio
         public int Estado { get; set; }
 
         public List<Imagen> listaImagenes { get; set; }
+
+        public int Cantidad { get; set; }
     }
 }

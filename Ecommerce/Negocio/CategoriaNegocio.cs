@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -129,5 +130,51 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public string obtener(int id)
+        {
+            string categoriaName;
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader = null;
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=Ecommerce; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "SELECT * FROM [dbo].[Categorias] WHERE ID_Categoria = @id";
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Connection = connection;
+
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    categoriaName = (string)reader["NombreCategoria"];
+                }
+                else
+                {
+                    categoriaName = "N/A";
+                }
+
+                return categoriaName;
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                throw ex;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+
+                connection.Close();
+            }
+        }
+
     }
 }

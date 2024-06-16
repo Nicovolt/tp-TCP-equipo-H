@@ -57,11 +57,84 @@ namespace tp_TCP_equipo_H
             }
 
         }
+
+        private void ActualizarPrecioTotal(List<Dominio.Articulo> carritoAct)
+        {
+            decimal total = 0;
+
+            foreach (RepeaterItem item in repeaterCarrito.Items)
+            {
+                System.Web.UI.WebControls.Label lblCantidad = (System.Web.UI.WebControls.Label)item.FindControl("lblCantidad");
+                System.Web.UI.WebControls.Label lblPrecio = (System.Web.UI.WebControls.Label)item.FindControl("lblPrecio");
+
+                if (lblCantidad != null && lblPrecio != null)
+                {
+                    int cantidad = int.Parse(lblCantidad.Text);
+                    decimal precio = decimal.Parse(lblPrecio.Text);
+
+                    total += precio * cantidad;
+                }
+            }
+
+            lblPrecioTotal.Text = total.ToString("C");
+        }
+
+
+
         private void cargarCarrito(List<Dominio.Articulo> carrito)
         {
             repeaterCarrito.DataSource = carrito;
             repeaterCarrito.DataBind();
 
+        }
+
+        private void EliminarArticulo(Dominio.Articulo articulo)
+        {
+            List<Dominio.Articulo> carrito = new List<Dominio.Articulo>();
+            carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
+
+            for (int i = 0; i < carrito.Count; i++)
+            {
+                if (carrito[i].idArticulo == articulo.idArticulo)
+                {
+                    carrito.RemoveAt(i);
+                    return;
+                }
+            }
+        }
+
+        protected void btnAumentarCantidad_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(((Button)sender).CommandArgument);
+            ModificarCantidad(id, 1); // Aumentar cantidad en 1
+        }
+
+        protected void btnDisminuirCantidad_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(((Button)sender).CommandArgument);
+            ModificarCantidad(id, -1); // Disminuir cantidad en 1
+        }
+        private void ModificarCantidad(int idArticulo, int cantidadModificar)
+        {
+            List<Dominio.Articulo> carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
+
+            // Buscar el artículo en el carrito
+            Dominio.Articulo articulo = carrito.Find(a => a.idArticulo == idArticulo);
+            if (articulo != null)
+            {
+                // Aumentar o disminuir la cantidad según el parámetro proporcionado
+                articulo.Cantidad += cantidadModificar;
+
+                // Asegurarse de que la cantidad no sea menor que 0
+                if (articulo.Cantidad < 0)
+                {
+                    articulo.Cantidad = 0;
+                }
+
+                // Actualizar el repeater y el precio total
+                cargarCarrito(carrito);
+                ActualizarPrecioTotal(carrito);
+            }
         }
     }
 }

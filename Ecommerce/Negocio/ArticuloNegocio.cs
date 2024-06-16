@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -144,8 +145,8 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                /*datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca WHERE C.NombreCategoria = @Categoria");*/
-                datos.setConexion("SELECT A.ID_Articulo as id, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, I.ID_Imagen, I.Url_Imagen as ImagenUrl, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca INNER JOIN Imagenes I on I.ID_Imagen = A.ID_Articulo WHERE C.NombreCategoria = @Categoria");
+             datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca WHERE C.NombreCategoria = @Categoria");
+            datos.setConexion("SELECT A.ID_Articulo as id, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, I.ID_Imagen, I.Url_Imagen as ImagenUrl, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca INNER JOIN Imagenes I on I.ID_Imagen = A.ID_Articulo WHERE C.NombreCategoria = @Categoria");
                 datos.setearParametro("@Categoria", categoria);
                 datos.abrirConexion();
                 while (datos.Lector.Read())
@@ -325,8 +326,8 @@ namespace Negocio
             try
             {
                 datos2.setConexion("insert into DetallePedidos(Cantidad,Talle,ID_Articulo,ID_Pedido,Importe) values(@cantidad,@talle,@idArticulo,@idPedido,@importe)");
-                /*datos2.setearParametro("@cantidad", articulo.cantidad);*/
-                datos2.setearParametro("@talle", articulo.talle);
+             datos2.setearParametro("@cantidad", articulo.Cantidad);
+            datos2.setearParametro("@talle", articulo.talle);
                 datos2.setearParametro("@idArticulo", articulo.idArticulo);
                 datos2.setearParametro("@idPedido", idPedido);
                 datos2.setearParametro("@importe", articulo.precio);
@@ -350,8 +351,8 @@ namespace Negocio
             try
             {
                 datos2.setConexion("update DetallePedidos set Cantidad=@cantidad,Importe=@importe where ID_Articulo=@idArticulo and Talle like @talle and ID_Pedido=@idPedido");
-                /*datos2.setearParametro("@cantidad", articulo.cantidad);*/
-                datos2.setearParametro("@talle", articulo.talle);
+             datos2.setearParametro("@cantidad", articulo.Cantidad);
+            datos2.setearParametro("@talle", articulo.talle);
                 datos2.setearParametro("@idArticulo", articulo.idArticulo);
                 datos2.setearParametro("@idPedido", idPedido);
                 datos2.setearParametro("@importe", articulo.precio);
@@ -365,6 +366,60 @@ namespace Negocio
             finally
             {
                 datos2.cerrarConexion();
+            }
+        }
+
+        public Articulo buscarPorId(int Id)
+        {
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader = null;
+            MarcaNegocio marcaService = new MarcaNegocio();
+            CategoriaNegocio categoriaService = new CategoriaNegocio();
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=Ecommerce; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "SELECT * FROM [dbo].[Articulos] WHERE ID_Articulo = @Id";
+                cmd.Parameters.AddWithValue("@Id", Id);
+                cmd.Connection = connection;
+
+                connection.Open();
+                reader = cmd.ExecuteReader();
+                Dominio.Articulo articulo;
+
+                while (reader.Read())
+                {
+                    articulo = new Dominio.Articulo();
+                    articulo.marca = new Marca();
+                    articulo.categoria = new Dominio.Categoria();
+                    articulo.idArticulo = reader.GetInt32(0);
+
+                    articulo.nombreArticulo = (string)reader["Nombre"];
+                    articulo.descripcion = (string)reader["Descripcion"];
+                    int idMarca = (int)reader["IdMarca"];
+                    articulo.marca.nombreMarca = marcaService.obtener(idMarca);
+                    int idCategoria = (int)reader["IdCategoria"];
+                    articulo.categoria.nombreCategoria = categoriaService.obtener(idCategoria);
+                    articulo.precio = (decimal)reader["Precio"];
+                    if (articulo.idArticulo == Id)
+                    {
+                        return articulo;
+                    }
+                }
+                //MessageBox.Show("Articulo no encontrado");
+                return articulo = null;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
     }
