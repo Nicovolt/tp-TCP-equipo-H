@@ -41,6 +41,37 @@ namespace tp_TCP_equipo_H
                 string articuloID = e.CommandArgument.ToString();
                 Response.Redirect($"DetalleArticulo.aspx?id={articuloID}");
             }
+            if (e.CommandName == "AgregarAlCarrito")
+            {
+                string idArticulo = e.CommandArgument.ToString();
+                AgregarAlCarrito(idArticulo);
+            }
+        }
+        private void AgregarAlCarrito(string idArticulo)
+        {
+            if (Session["CarritoCompras"] == null)
+            {
+                Session["CarritoCompras"] = new List<Dominio.Articulo>();
+            }
+
+            int id = Convert.ToInt32(idArticulo);
+            Dominio.Articulo articulo = articulonegocio.buscarPorID(id);
+
+            if (articulo != null)
+            {
+                List<Dominio.Articulo> carrito = Session["CarritoCompras"] as List<Dominio.Articulo>;
+                carrito.Add(articulo);
+                Session["CarritoCompras"] = carrito;
+
+                List<Dominio.Articulo> carritoActual = (List<Dominio.Articulo>)Session["CarritoCompras"];
+                int cantArticulos = carritoActual.Count;
+
+                Main masterPage = (Main)this.Master;
+                masterPage.ActualizarContadorCarrito(cantArticulos);
+
+                // Redirigir a la página del carrito de compras o mostrar un mensaje de éxito
+                //Response.Redirect("CarritoCompras.aspx");
+            }
         }
     }
 }
