@@ -48,18 +48,20 @@ namespace tp_TCP_equipo_H
             repeaterImagenes.DataBind();
         }
 
+        
+
+
         protected void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["CarritoCompras"] == null)
             {
-                if (Session["CarritoCompras"] == null)
-                {
-                    List<Articulo> Newcarrito = new List<Articulo>();
-                    Session["CarritoCompras"] = Newcarrito;
-                }
+                List<Dominio.Articulo> Newcarrito = new List<Dominio.Articulo>();
+                Session["CarritoCompras"] = Newcarrito;
             }
-            int id = ObtenerElIdDelArticuloDesdeLaURL();
-            if (id > 0)
+
+            // Obtener el ID del artículo desde el campo oculto
+            int id;
+            if (int.TryParse(hfArticuloID.Value, out id) && id > 0)
             {
                 Dominio.Articulo articulo = articuloNegocio.buscarPorID(id);
 
@@ -76,11 +78,11 @@ namespace tp_TCP_equipo_H
                     List<Dominio.Articulo> carritoActual = (List<Dominio.Articulo>)Session["CarritoCompras"];
                     int cantArticulos = carritoActual.Count;
 
-
                     Main masterPage = (Main)this.Master;
                     masterPage.ActualizarContadorCarrito(cantArticulos);
                 }
             }
         }
+
     }
 }
