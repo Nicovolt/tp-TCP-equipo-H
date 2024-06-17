@@ -7,10 +7,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-using System;
-using System.Collections.Generic;
-using Dominio;
-
 namespace tp_TCP_equipo_H
 {
     public partial class CarritoCompras : System.Web.UI.Page
@@ -30,7 +26,7 @@ namespace tp_TCP_equipo_H
                 CargarCarrito();
             }
 
-            int id = ObtenerIdArticulo(); // Método para obtener el ID del artículo (de la URL o de otra fuente)
+            int id = ObtenerIdArticulo();
 
             if (id > 0)
             {
@@ -48,6 +44,20 @@ namespace tp_TCP_equipo_H
                 }
             }
         }
+        private void EliminarArticulo(Dominio.Articulo articulo)
+        {
+            List<Dominio.Articulo> carrito = new List<Dominio.Articulo>();
+            carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
+
+            for (int i = 0; i < carrito.Count; i++)
+            {
+                if (carrito[i].idArticulo == articulo.idArticulo)
+                {
+                    carrito.RemoveAt(i);
+                    return;
+                }
+            }
+        }
 
         private void CargarCarrito()
         {
@@ -56,9 +66,27 @@ namespace tp_TCP_equipo_H
             repeaterCarrito.DataBind();
         }
 
-        private void ActualizarPrecioTotal(List<Dominio.Articulo> carrito)
+        private void ActualizarPrecioTotal(List<Dominio.Articulo> carritoAct)
         {
             decimal total = 0;
+            int cantidad = 0;
+            foreach (RepeaterItem item in repeaterCarrito.Items)
+            {
+                System.Web.UI.WebControls.Label lblCantidad = (System.Web.UI.WebControls.Label)item.FindControl("lblCantidad");
+                if (lblCantidad != null)
+                {
+                    cantidad = int.Parse(lblCantidad.Text);
+                }
+
+            }
+
+            foreach (Dominio.Articulo art in carritoAct)
+            {
+
+                total += art.precio * cantidad;
+            }
+            lblPrecioTotal.Text = total.ToString();
+            /*decimal total = 0;
 
             foreach (RepeaterItem item in repeaterCarrito.Items)
             {
@@ -73,7 +101,7 @@ namespace tp_TCP_equipo_H
                 }
             }
 
-            lblPrecioTotal.Text = total.ToString("C");
+            lblPrecioTotal.Text = total.ToString("C");*/
         }
 
         protected void btnAumentarCantidad_Click(object sender, EventArgs e)
@@ -123,6 +151,21 @@ namespace tp_TCP_equipo_H
         {
             Main masterPage = (Main)this.Master;
             masterPage.ActualizarContadorCarrito(cantArticulos);
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(((Button)sender).CommandArgument);
+            Dominio.Articulo articulo = new Dominio.Articulo();
+            articulo = articuloNegocio.buscarPorID(id);
+            List<Dominio.Articulo> carrito = new List<Dominio.Articulo>();
+            carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
+
+            EliminarArticulo(articulo);
+            CargarCarrito();
+            ActualizarPrecioTotal(carrito);
+            ActualizarContadorCarrito(carrito.Count);
+
         }
     }
 }

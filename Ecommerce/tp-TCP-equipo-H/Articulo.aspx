@@ -32,9 +32,24 @@
         }
     </style>
     <asp:Label ID="lblArticulo" CssClass="lblArticulo" Text="" runat="server" />
-    <asp:Repeater runat="server" ID="repeaterArticulos" OnItemCommand="repeaterArticulos_ItemCommand">
-        <ItemTemplate>
-             <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <asp:Repeater runat="server" ID="repeaterArticulos" OnItemCommand="repeaterArticulos_ItemCommand">
+            <ItemTemplate>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="<%# ((List<Dominio.Imagen>)Eval("listaImagenes"))[0].UrlImagen %>" class="card-img-top" alt="Imagen del artículo">
+                        <div class="card-body">
+                            <h5 class="card-title"><%# Eval("NombreArticulo") %></h5>
+                            <p class="card-text">Descripcio: <%# Eval("Descripcion") %></p>
+                            <p class="card-text">Precio: <%# Eval("Precio") %></p>
+                            <asp:Button ID="Button1" runat="server" CommandName="VerDetalle" CommandArgument='<%# Eval("idArticulo") %>' Text="Ver detalle" CssClass="btn btn-primary" />
+                            <asp:Button ID="Button2" runat="server" CommandName="AgregarAlCarrito" CommandArgument='<%# Eval("idArticulo") %>' Text="Agregar al carrito" CssClass="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-100">
                         <img src="<%# ((List<Dominio.Imagen>)Eval("listaImagenes"))[0].UrlImagen %>" class="card-img-top" alt="Imagen del artículo">
@@ -48,7 +63,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </ItemTemplate>
-    </asp:Repeater>
+            </div>-->
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
 </asp:Content>

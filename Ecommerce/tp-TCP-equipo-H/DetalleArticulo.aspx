@@ -5,8 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:GridView runat="server" ID="dgvArtDetalle"></asp:GridView>
     <div class="container mt-5">
-        <div class="row">
-            <!-- Detalles del producto (primera mitad) -->
+        <div class="row">          
             <div class="col-md-6" style="display: flex; flex-direction: column; justify-content: space-around; color: #000000">
                 <h2 style="text-align: center;">Detalle de producto</h2>
                 <hr />
@@ -28,7 +27,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Carrusel de imágenes (segunda mitad) -->
             <div class="col-md-6" style="height: 60vh;">
                 <div id="carouselExample" class="carousel slide" style="height: 100%;" data-bs-ride="carousel">
                     <div class="carousel-inner" style="height: 100%;">

@@ -19,7 +19,6 @@ namespace tp_TCP_equipo_H
             {
                 if (int.TryParse(Request.QueryString["id"], out idArticulo))
                 {
-                    // ID válido en la URL.
                 }
             }
             return idArticulo;
@@ -53,15 +52,16 @@ namespace tp_TCP_equipo_H
 
         protected void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (Session["CarritoCompras"] == null)
+            if (!IsPostBack)
             {
-                List<Dominio.Articulo> Newcarrito = new List<Dominio.Articulo>();
-                Session["CarritoCompras"] = Newcarrito;
+                if (Session["CarritoCompras"] == null)
+                {
+                    List<Dominio.Articulo> Newcarrito = new List<Dominio.Articulo>();
+                    Session["CarritoCompras"] = Newcarrito;
+                }
             }
-
-            // Obtener el ID del artículo desde el campo oculto
-            int id;
-            if (int.TryParse(hfArticuloID.Value, out id) && id > 0)
+            int id = ObtenerElIdDelArticuloDesdeLaURL();
+            if (id > 0)
             {
                 Dominio.Articulo articulo = articuloNegocio.buscarPorID(id);
 
@@ -77,6 +77,7 @@ namespace tp_TCP_equipo_H
 
                     List<Dominio.Articulo> carritoActual = (List<Dominio.Articulo>)Session["CarritoCompras"];
                     int cantArticulos = carritoActual.Count;
+
 
                     Main masterPage = (Main)this.Master;
                     masterPage.ActualizarContadorCarrito(cantArticulos);

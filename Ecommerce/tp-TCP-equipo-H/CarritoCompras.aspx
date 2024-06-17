@@ -45,12 +45,12 @@
                         <td><%# Eval("Talle") %></td>
                         <!--<td></td>-->
                         <td>
-                            <asp:Button ID="btnDisminuirCantidad" runat="server" Text="-" CommandArgument='<%# Eval("idArticulo") %>' CommandName="disminuirCantidad" />
-                            <!--<asp:Label ID="lblCantidad" runat="server" Text=''></asp:Label>-->
-                            <asp:Button ID="btnAumentarCantidad" runat="server" Text="+" CommandArgument='<%# Eval("idArticulo") %>' CommandName="aumentarCantidad" />
+                            <asp:Button ID="btnDisminuirCantidad" runat="server" Text="-" OnClick="btnDisminuirCantidad_Click" CommandArgument='<%# Eval("idArticulo") %>' CommandName="disminuirCantidad" />
+                            <asp:Label ID="lblCantidad" runat="server" Text='<%# Eval("Cantidad") %>'></asp:Label>
+                            <asp:Button ID="btnAumentarCantidad" runat="server" Text="+" OnClick="btnAumentarCantidad_Click" CommandArgument='<%# Eval("idArticulo") %>' CommandName="aumentarCantidad" />
                         </td>
                         <td>
-                            <asp:Button ID="btnEliminar" runat="server" Text="X" CommandArgument='<%# Eval("idArticulo") %>' CommandName="idArticulo" /></td>
+                            <asp:Button ID="btnEliminar" runat="server" Text="X" OnClick="btnEliminar_Click" CommandArgument='<%# Eval("idArticulo") %>' CommandName="idArticulo" /></td>
 
                     </tr>
                 </ItemTemplate>
