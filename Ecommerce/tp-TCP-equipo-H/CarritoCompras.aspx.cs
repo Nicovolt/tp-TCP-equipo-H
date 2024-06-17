@@ -24,6 +24,14 @@ namespace tp_TCP_equipo_H
             if (!IsPostBack)
             {
                 CargarCarrito();
+                if (Session["TotalCarrito"] != null)
+                {
+                    lblPrecioTotal.Text = Session["TotalCarrito"].ToString();
+                }
+                else
+                {
+                    actualizarTotalCarrito();
+                }
             }
 
             int id = ObtenerIdArticulo();
@@ -39,7 +47,7 @@ namespace tp_TCP_equipo_H
                     Session["CarritoCompras"] = carrito;
 
                     CargarCarrito();
-                    ActualizarPrecioTotal(carrito);
+                    actualizarTotalCarrito();
                     ActualizarContadorCarrito(carrito.Count);
                 }
             }
@@ -66,76 +74,49 @@ namespace tp_TCP_equipo_H
             repeaterCarrito.DataBind();
         }
 
-        private void ActualizarPrecioTotal(List<Dominio.Articulo> carritoAct)
+        private void actualizarTotalCarrito()
         {
-            decimal total = 0;
-            int cantidad = 0;
-            foreach (RepeaterItem item in repeaterCarrito.Items)
+            List<Dominio.Articulo> carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
+            decimal totalCarrito = 0;
+
+            foreach (Dominio.Articulo item in carrito)
             {
-                System.Web.UI.WebControls.Label lblCantidad = (System.Web.UI.WebControls.Label)item.FindControl("lblCantidad");
-                if (lblCantidad != null)
-                {
-                    cantidad = int.Parse(lblCantidad.Text);
-                }
-
+                totalCarrito += item.Cantidad * item.precio;
             }
+            Session["TotalaCarrito"] = totalCarrito.ToString("0.00");
 
-            foreach (Dominio.Articulo art in carritoAct)
-            {
-
-                total += art.precio * cantidad;
-            }
-            lblPrecioTotal.Text = total.ToString();
-            /*decimal total = 0;
-
-            foreach (RepeaterItem item in repeaterCarrito.Items)
-            {
-                var lblCantidad = (Label)item.FindControl("lblCantidad");
-                var lblPrecio = (Label)item.FindControl("lblPrecio");
-
-                if (lblCantidad != null && lblPrecio != null)
-                {
-                    int cantidad = int.Parse(lblCantidad.Text);
-                    decimal precio = decimal.Parse(lblPrecio.Text);
-                    total += precio * cantidad;
-                }
-            }
-
-            lblPrecioTotal.Text = total.ToString("C");*/
+            lblPrecioTotal.Text = totalCarrito.ToString("0.00");
         }
 
         protected void btnAumentarCantidad_Click(object sender, EventArgs e)
         {
             int id = int.Parse(((Button)sender).CommandArgument);
-            ModificarCantidad(id, 1);
+            List<Dominio.Articulo> carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
+
+            Dominio.Articulo articulo = carrito.FirstOrDefault(a => a.idArticulo == id);
+            if (articulo != null)
+            {
+                articulo.Cantidad += 1;
+            }
+
+            CargarCarrito();
+            actualizarTotalCarrito();
         }
 
         protected void btnDisminuirCantidad_Click(object sender, EventArgs e)
         {
             int id = int.Parse(((Button)sender).CommandArgument);
-            ModificarCantidad(id, -1);
-        }
-
-        private void ModificarCantidad(int idArticulo, int cantidadModificar)
-        {
             List<Dominio.Articulo> carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
-            Dominio.Articulo articulo = carrito.Find(a => a.idArticulo == idArticulo);
 
-            if (articulo != null)
+            Dominio.Articulo articulo = carrito.FirstOrDefault(a => a.idArticulo == id);
+            if (articulo != null && articulo.Cantidad > 1)
             {
-                articulo.Cantidad += cantidadModificar;
-
-                if (articulo.Cantidad < 1)
-                {
-                    carrito.Remove(articulo);
-                }
-
-                Session["CarritoCompras"] = carrito;
-                CargarCarrito();
-                ActualizarPrecioTotal(carrito);
+                articulo.Cantidad -= 1;
             }
-        }
 
+            CargarCarrito();
+            actualizarTotalCarrito();
+        }
         private int ObtenerIdArticulo()
         {
             int id;
@@ -144,7 +125,7 @@ namespace tp_TCP_equipo_H
                 return id;
             }
 
-            return -1; // Valor inválido si no se encuentra ID
+            return -1;
         }
 
         private void ActualizarContadorCarrito(int cantArticulos)
@@ -163,7 +144,7 @@ namespace tp_TCP_equipo_H
 
             EliminarArticulo(articulo);
             CargarCarrito();
-            ActualizarPrecioTotal(carrito);
+            actualizarTotalCarrito();
             ActualizarContadorCarrito(carrito.Count);
 
         }
