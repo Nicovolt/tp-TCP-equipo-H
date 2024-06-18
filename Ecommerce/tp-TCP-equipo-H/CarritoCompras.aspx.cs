@@ -148,5 +148,25 @@ namespace tp_TCP_equipo_H
             ActualizarContadorCarrito(carrito.Count);
 
         }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                List<Dominio.Articulo> Compras = (List<Dominio.Articulo>)Session["CarritoCompras"];
+                Dominio.DetallePedido detallepedido = new Dominio.DetallePedido();
+                Dominio.Pedido pedido = new Dominio.Pedido();
+                foreach (Dominio.Articulo articulos in Compras)
+                {
+                    detallepedido.nombreArticulo =articulos.nombreArticulo;
+                    detallepedido.nombreMarca = articulos.marca.nombreMarca;
+                    
+                }
+            }         
+        }
     }
 }

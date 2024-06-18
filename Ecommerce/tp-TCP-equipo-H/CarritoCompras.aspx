@@ -61,10 +61,12 @@
                 <td>Total</td>
                 <td>
                     <asp:Label ID="lblPrecioTotal" runat="server" Text="0"></asp:Label></td>
-                <td>
-                    <!-- comento este boton ya que da error en la pagina de carrito -->
+                <td>    
+                    <asp:Button ID="btnComprar" OnClick="btnComprar_Click" runat="server"  Text="Comprar" CssClass="btn btn-success" />
+                 </td>
 
             </tr>
         </tfoot>
     </table>
 </asp:Content>
+
