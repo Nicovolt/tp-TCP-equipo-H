@@ -24,24 +24,6 @@ namespace tp_TCP_equipo_H
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control ddlMarca.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMarca;
-
-        /// <summary>
-        /// Control ddlTalle.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTalle;
-
-        /// <summary>
         /// Control lblArticulo.
         /// </summary>
         /// <remarks>

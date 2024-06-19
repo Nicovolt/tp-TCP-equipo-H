@@ -100,6 +100,7 @@ namespace tp_TCP_equipo_H
                 else
                 {
                     idArticulo = articuloNegocio.agregar(nuevoArticulo);
+                    imagenNegocio.GuardarImagen(inpImagen.Text, idArticulo);
                 }
                 if (idArticulo > 0)
                 {

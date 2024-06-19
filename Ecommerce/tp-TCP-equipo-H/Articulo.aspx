@@ -47,22 +47,7 @@
             margin-left: 10px;
         }
     </style>
-    <asp:Label ID="Label1" CssClass="lblArticulo" Text="" runat="server" />
-    
-    <div class="filtro">
-        <label for="ddlMarca">Marca:</label>
-        <asp:DropDownList ID="ddlMarca" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlMarca_SelectedIndexChanged">
-            <asp:ListItem Text="Todas las marcas" Value="0"></asp:ListItem>
-            <!-- Aquí se cargarán dinámicamente las marcas desde el código detrás -->
-        </asp:DropDownList>
-        
-        <label for="ddlTalle">Talle:</label>
-        <asp:DropDownList ID="ddlTalle" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlTalle_SelectedIndexChanged">
-            <asp:ListItem Text="Todos los talles" Value="0"></asp:ListItem>
-            <!-- Aquí se cargarán dinámicamente los talles desde el código detrás -->
-        </asp:DropDownList>
-    </div>
-    
+    <asp:Label ID="Label1" CssClass="lblArticulo" Text="" runat="server" />    
     <asp:Label ID="lblArticulo" CssClass="lblArticulo" Text="" runat="server" />
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <asp:Repeater runat="server" ID="repeaterArticulos" OnItemCommand="repeaterArticulos_ItemCommand">
