@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,5 +39,17 @@ namespace tp_TCP_equipo_H
         {
             Session["usuario"] = null;
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            List<Articulo> articulos;
+            string busqueda = searchTextBox.Text;
+
+           
+        }
+       
+
+
+
     }
 }

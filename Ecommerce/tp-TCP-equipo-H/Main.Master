@@ -135,10 +135,57 @@
 
         /* Estilo cuando el mouse está sobre el enlace */
         li a:hover {
-            background-color: yellow; /* Color de fondo al pasar el mouse */
             color: lightblue; /* Color de texto al pasar el mouse */
         }
+        .center {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin: 0 auto; /* Centra el div en el centro de la página */
+    width: 50%; /* Ancho del div */
+    padding: 20px; /* Espaciado interno */
+}
+   .search-bar {
+       width: 250px;
+       border: 1px solid #ccc;
+       border-radius: 20px;
+       overflow: hidden;
+        margin-top: 20px;
+        text-align: center; /* Centra el contenedor horizontalmente */
+   }
 
+   .search-input {
+       flex: 1; /* Expande el campo de entrada para ocupar el espacio disponible */
+       width: calc(100% - 50px); /* Ajusta el ancho del campo de entrada */
+       border: none;
+       outline: none;
+       padding: 10px;
+       font-size: 16px;
+   }
+
+   .search-button {
+       background-color: #000000;
+       color: white;
+       border: none;
+       padding: 10px 14.5px;
+       border-radius: 0 20px 20px 0;
+       cursor: pointer;
+   }
+
+   /* Estilos para el ícono de lupa */
+   .search-icon {
+       font-size: 20px;
+   }
+   .search-container {
+    text-align: center; /* Centra el contenedor horizontalmente */
+    margin-top: 20px; /* Espacio superior entre la imagen y el contenedor de búsqueda */
+    width: 80%; /* Ancho del contenedor de búsqueda como un porcentaje del contenedor padre */
+    max-width: 500px; /* Ancho máximo del contenedor de búsqueda para limitar su tamaño */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    
+
+}
 
 </style>
 <html>
@@ -157,6 +204,31 @@
     <form id="form1" runat="server">
         <div class="wrapper">
             <header class="header">
+                <div class ="footer">
+
+                </div>
+                <div class="center">
+
+                     <img src="Imagenes/EquipoH-removebg-preview.png" alt="Equipo H">
+
+                 <div class="search-container">
+                     <asp:TextBox ID="searchTextBox" runat="server" CssClass="search-input" placeholder="Buscar..." onkeydown="enter(event)"></asp:TextBox>
+                     <asp:LinkButton ID="btnSearch" runat="server" CssClass="search-button" OnClick="btnSearch_Click" type="button">
+                      <i class="fas fa-search"></i>
+                     </asp:LinkButton>
+                </div>
+                 <script>
+                     function enter(event) {
+                         if (event.keyCode === 13 || event.which === 13) {
+                             event.preventDefault();
+                             document.getElementById('<%= btnSearch.ClientID %>').click();
+                          }
+                      }
+             
+
+                 </script>
+
+                </div>
                 <nav class="navegacion">
                     <ul class="menu">
                         <li><a href="Default.aspx">Inicio</a></li>

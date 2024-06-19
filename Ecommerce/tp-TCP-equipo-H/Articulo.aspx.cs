@@ -75,5 +75,10 @@ namespace tp_TCP_equipo_H
                 //Response.Redirect("CarritoCompras.aspx");
             }
         }
+
+        protected void ddlTalle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

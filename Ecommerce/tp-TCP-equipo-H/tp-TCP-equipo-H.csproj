@@ -75,6 +75,7 @@
     <Content Include="Global.asax" />
     <Content Include="Imagenes\buzos.jpg" />
     <Content Include="Imagenes\camperas.jpg" />
+    <Content Include="Imagenes\EquipoH-removebg-preview.png" />
     <Content Include="Imagenes\Gafas.jpg" />
     <Content Include="Imagenes\Pantalones.jpg" />
     <Content Include="Imagenes\remeras.jpg" />

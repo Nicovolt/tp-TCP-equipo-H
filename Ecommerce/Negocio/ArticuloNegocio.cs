@@ -52,6 +52,46 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Articulo> BuscarPorNombre(string nombre)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            MarcaNegocio marcaDB = new MarcaNegocio();
+            CategoriaNegocio categoriaDB = new CategoriaNegocio();
+
+            try
+            {
+                datos.setearConsulta("SELECT * FROM ARTICULOS WHERE Nombre LIKE @Nombre");
+                datos.setearParametro("@Nombre", "%" + nombre + "%");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo articulo = new Articulo();
+                    articulo.idArticulo = Convert.ToInt32(datos.Lector["IdArticulo"]);
+                    articulo.nombreArticulo = Convert.ToString(datos.Lector["Nombre"]);
+                    articulo.descripcion = Convert.ToString(datos.Lector["Descripcion"]);
+                    articulo.precio = Convert.ToDecimal(datos.Lector["Precio"]);
+                    articulo.stock = Convert.ToInt32(datos.Lector["Stock"]);
+                    articulo.talle = Convert.ToString(datos.Lector["Talle"]);
+                    articulo.Estado = Convert.ToInt32(datos.Lector["Estado"]);
+
+
+
+                    lista.Add(articulo);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
         public List<Articulo> ListarconSP()
 
         {
