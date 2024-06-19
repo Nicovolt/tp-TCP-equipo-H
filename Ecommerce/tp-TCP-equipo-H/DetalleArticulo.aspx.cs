@@ -64,6 +64,7 @@ namespace tp_TCP_equipo_H
             if (id > 0)
             {
                 Dominio.Articulo articulo = articuloNegocio.buscarPorID(id);
+                articulo.Cantidad = 1;
 
                 if (articulo != null)
                 {

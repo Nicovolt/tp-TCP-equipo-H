@@ -56,10 +56,12 @@ namespace tp_TCP_equipo_H
 
             int id = Convert.ToInt32(idArticulo);
             Dominio.Articulo articulo = articulonegocio.buscarPorID(id);
+            articulo.Cantidad = 1;
 
             if (articulo != null)
             {
                 List<Dominio.Articulo> carrito = Session["CarritoCompras"] as List<Dominio.Articulo>;
+                
                 carrito.Add(articulo);
                 Session["CarritoCompras"] = carrito;
 

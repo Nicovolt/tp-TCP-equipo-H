@@ -42,7 +42,7 @@ namespace tp_TCP_equipo_H
 
                 if (articulo != null)
                 {
-                    List<Dominio.Articulo> carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
+                    List<Dominio.Articulo> carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];                
                     carrito.Add(articulo);
                     Session["CarritoCompras"] = carrito;
 
@@ -69,7 +69,7 @@ namespace tp_TCP_equipo_H
 
         private void CargarCarrito()
         {
-            List<Dominio.Articulo> carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];
+            List<Dominio.Articulo> carrito = (List<Dominio.Articulo>)Session["CarritoCompras"];          
             repeaterCarrito.DataSource = carrito;
             repeaterCarrito.DataBind();
         }
@@ -83,7 +83,7 @@ namespace tp_TCP_equipo_H
             {
                 totalCarrito += item.Cantidad * item.precio;
             }
-            Session["TotalaCarrito"] = totalCarrito.ToString("0.00");
+            Session["TotalCarrito"] = totalCarrito.ToString("0.00");
 
             lblPrecioTotal.Text = totalCarrito.ToString("0.00");
         }
@@ -157,14 +157,24 @@ namespace tp_TCP_equipo_H
             }
             else
             {
-                List<Dominio.Articulo> Compras = (List<Dominio.Articulo>)Session["CarritoCompras"];
-                Dominio.DetallePedido detallepedido = new Dominio.DetallePedido();
-                Dominio.Pedido pedido = new Dominio.Pedido();
-                foreach (Dominio.Articulo articulos in Compras)
+                if (Session["CarritoCompras"] != null)
                 {
-                    detallepedido.nombreArticulo =articulos.nombreArticulo;
-                    detallepedido.nombreMarca = articulos.marca.nombreMarca;
-                    
+                    List<Dominio.Articulo> Compras = (List<Dominio.Articulo>)Session["CarritoCompras"];
+                    Dominio.DetallePedido detallepedido = new Dominio.DetallePedido();
+                    Dominio.Pedido pedido = new Dominio.Pedido();
+                    int NumerosArticulos = Compras.Count;
+                    decimal totalCarrito = decimal.Parse(Session["TotalCarrito"].ToString());
+
+                        foreach (Dominio.Articulo articulos in Compras)
+                        {
+                            //detallepedido.nombreUsuario = NombreUsuaruio;
+                            detallepedido.nombreArticulo = articulos.nombreArticulo;
+                            detallepedido.nombreMarca = articulos.marca.nombreMarca;
+                            detallepedido.descripcion = articulos.descripcion;
+                            detallepedido.cantidad = articulos.Cantidad;
+                            detallepedido.talle = articulos.talle;
+                            detallepedido.importe = articulos.Cantidad * articulos.precio;
+                        }                                        
                 }
             }         
         }
