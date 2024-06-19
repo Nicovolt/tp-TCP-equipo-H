@@ -125,6 +125,21 @@
         .menu li.cart .cart-label {
             color: white;
         }
+
+           li a {
+            text-decoration: none;
+            color: black; /* Color por defecto */
+            padding: 10px;
+            display: block;
+        }
+
+        /* Estilo cuando el mouse está sobre el enlace */
+        li a:hover {
+            background-color: yellow; /* Color de fondo al pasar el mouse */
+            color: lightblue; /* Color de texto al pasar el mouse */
+        }
+
+
 </style>
 <html>
 <head runat="server">
