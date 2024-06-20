@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Luka\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\luka\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\luka\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Luka\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\articulo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\articulo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\luka\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\Luka\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Default.aspx",
+              "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Default.aspx",
+              "ToolTip": "C:\\Users\\Luka\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Default.aspx",
+              "RelativeToolTip": "tp-TCP-equipo-H\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-20T20:34:37.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Main.Master",
               "DocumentMoniker": "C:\\Users\\Luka\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Main.Master",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Main.Master",
