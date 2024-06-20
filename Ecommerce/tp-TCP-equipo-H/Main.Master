@@ -185,7 +185,31 @@
     margin: 0 auto; /* Centra el contenedor horizontalmente */
     
 
-}
+   }
+
+      body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .carousel {
+            width: 100%;
+        }
+        .carousel-inner {
+            width: 100%;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            
+        }
+         .carousel-item {
+            max-height: 410px; /* Altura máxima para todas las imágenes */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: contain;
+        }
 
 </style>
 <html>
@@ -204,31 +228,36 @@
     <form id="form1" runat="server">
         <div class="wrapper">
             <header class="header">
-                <!--<div class ="footer">
+                <div class ="footer">
 
                 </div>
-                <div class="center">
+              <div id="carouselExampleIndicators" class="carousel slide center" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="Imagenes/Jordan.jpg" class="d-block w-100" alt="Equipo H">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Imagenes/publi.jpg" class="d-block w-100" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="Imagenes/Nike.jpg" class="d-block w-100" alt="Imagen 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+               </div>
 
-                     <img src="Imagenes/EquipoH-removebg-preview.png" alt="Equipo H">
-
-                 <div class="search-container">
-                     <asp:TextBox ID="searchTextBox" runat="server" CssClass="search-input" placeholder="Buscar..." onkeydown="enter(event)"></asp:TextBox>
-                     <asp:LinkButton ID="btnSearch" runat="server" CssClass="search-button" OnClick="btnSearch_Click" type="button">
-                      <i class="fas fa-search"></i>
-                     </asp:LinkButton>
-                </div>
-                 <script>
-                     function enter(event) {
-                         if (event.keyCode === 13 || event.which === 13) {
-                             event.preventDefault();
-                             document.getElementById('<%= btnSearch.ClientID %>').click();
-                          }
-                      }
-             
-
-                 </script>
-
-                </div>-->
                 <nav class="navegacion">
                     <ul class="menu">
                         <li><a href="Default.aspx">Inicio</a></li>
@@ -280,6 +309,22 @@
                         </li>
                     </ul>
                 </nav>
+                 <div class="search-container">
+                     <asp:TextBox ID="searchTextBox" runat="server" CssClass="search-input" placeholder="Buscar..." onkeydown="enter(event)"></asp:TextBox>
+                     <asp:LinkButton ID="btnSearch" runat="server" CssClass="search-button" OnClick="btnSearch_Click" type="button">
+                      <i class="fas fa-search"></i>
+                     </asp:LinkButton>
+                </div>
+                 <script>
+                     function enter(event) {
+                         if (event.keyCode === 13 || event.which === 13) {
+                             event.preventDefault();
+                             document.getElementById('<%= btnSearch.ClientID %>').click();
+                          }
+                      }
+             
+
+                 </script>
             </header>
             <div class="content">
                 <section>

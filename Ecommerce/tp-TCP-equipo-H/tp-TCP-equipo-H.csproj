@@ -75,9 +75,13 @@
     <Content Include="Global.asax" />
     <Content Include="Imagenes\buzos.jpg" />
     <Content Include="Imagenes\camperas.jpg" />
+    <Content Include="Imagenes\Color_negro.jpg" />
     <Content Include="Imagenes\EquipoH-removebg-preview.png" />
     <Content Include="Imagenes\Gafas.jpg" />
+    <Content Include="Imagenes\Jordan.jpg" />
+    <Content Include="Imagenes\Nike.jpg" />
     <Content Include="Imagenes\Pantalones.jpg" />
+    <Content Include="Imagenes\publi.jpg" />
     <Content Include="Imagenes\remeras.jpg" />
     <Content Include="Imagenes\sweater.jpg" />
     <Content Include="Login.aspx" />
