@@ -12,9 +12,9 @@
                 <div style="display: flex; flex-direction: column;">
                     <span class="texto-secundario">Nombre:</span>
                     <asp:Label ID="lblNombreArticulo" runat="server" Text="" CssClass="font-weight-bold"></asp:Label><br />
-                    <span class="texto-secundario">Descripcion:</span>
+                    <span class="texto-secundario">Descripción:</span>
                     <asp:Label ID="lblDescripcionArticulo" runat="server" Text=""></asp:Label><br />
-                    <span class="texto-secundario">Categoria: </span>
+                    <span class="texto-secundario">Categoría: </span>
                     <asp:Label ID="lblCategoriaArticulo" runat="server" Text=""></asp:Label><br />
                     <span class="texto-secundario">Marca: </span>
                     <asp:Label ID="lblMarcaArticulo" runat="server" Text=""></asp:Label><br />
@@ -34,8 +34,7 @@
                             <ItemTemplate>
                                 <div class='carousel-item<%# Container.ItemIndex == 0 ? " active" : "" %>' style="height: 200px;">
                                     <div class="imagen-carrusel">
-                                        <asp:Image ID="imgArticulo" runat="server" ImageUrl='<%# Container.DataItem %>' CssClass="d-block w-100 artImagen" alt="No se pudo cargar la imagen" />
-
+                                        <asp:Image ID="imgArticulo" runat="server" ImageUrl='<%# Eval("UrlImagen") %>' CssClass="d-block w-100 artImagen" alt="No se pudo cargar la imagen" />
                                     </div>
                                 </div>
                             </ItemTemplate>

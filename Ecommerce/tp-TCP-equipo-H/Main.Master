@@ -204,7 +204,7 @@
     <form id="form1" runat="server">
         <div class="wrapper">
             <header class="header">
-                <div class ="footer">
+                <!--<div class ="footer">
 
                 </div>
                 <div class="center">
@@ -228,7 +228,7 @@
 
                  </script>
 
-                </div>
+                </div>-->
                 <nav class="navegacion">
                     <ul class="menu">
                         <li><a href="Default.aspx">Inicio</a></li>

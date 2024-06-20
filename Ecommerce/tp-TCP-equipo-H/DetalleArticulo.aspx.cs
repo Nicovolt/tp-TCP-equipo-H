@@ -12,6 +12,7 @@ namespace tp_TCP_equipo_H
     public partial class DetalleArticulo : System.Web.UI.Page
     {
         private ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+
         private int ObtenerElIdDelArticuloDesdeLaURL()
         {
             int idArticulo = -1;
@@ -23,6 +24,7 @@ namespace tp_TCP_equipo_H
             }
             return idArticulo;
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -34,21 +36,20 @@ namespace tp_TCP_equipo_H
                 }
             }
         }
+
         private void CargarDetalleArticulo(string articuloID)
         {
             ArticuloNegocio articuloService = new ArticuloNegocio();
             Dominio.Articulo articulo = articuloService.buscarPorID(int.Parse(articuloID));
             lblNombreArticulo.Text = articulo.nombreArticulo;
-            lblDescripcionArticulo.Text = articulo.marca.nombreMarca;
+            lblDescripcionArticulo.Text = articulo.descripcion; 
             lblCategoriaArticulo.Text = articulo.categoria.nombreCategoria;
             lblMarcaArticulo.Text = articulo.marca.nombreMarca;
             lblPrecioArticulo.Text = articulo.precio.ToString();
-            repeaterImagenes.DataSource = articulo.listaImagenes;
+
+            repeaterImagenes.DataSource = articulo.listaImagenes.Select(i => new { UrlImagen = i.UrlImagen });
             repeaterImagenes.DataBind();
         }
-
-        
-
 
         protected void btnCarrito_Click(object sender, EventArgs e)
         {
@@ -79,12 +80,10 @@ namespace tp_TCP_equipo_H
                     List<Dominio.Articulo> carritoActual = (List<Dominio.Articulo>)Session["CarritoCompras"];
                     int cantArticulos = carritoActual.Count;
 
-
                     Main masterPage = (Main)this.Master;
                     masterPage.ActualizarContadorCarrito(cantArticulos);
                 }
             }
         }
-
     }
 }

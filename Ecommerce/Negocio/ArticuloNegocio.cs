@@ -142,31 +142,42 @@ namespace Negocio
 
             try
             {
-                datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, A.Talla, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, A.Precio, A.Stock, A.Talla, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca WHERE A.ID_Articulo = @ID");
+                datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, A.Talla, C.ID_Categoria, C.NombreCategoria AS Categoria, M.ID_Marca, M.NombreMarca AS Marca, A.Precio, A.Stock, A.Estado, I.Url_Imagen FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca LEFT JOIN Imagenes I ON I.ID_Articulo = A.ID_Articulo WHERE A.ID_Articulo = @ID");
                 datos.setearParametro("@ID", Id);
                 datos.abrirConexion();
 
-                if (datos.Lector.Read())
-                {
-                    Articulo articulo = new Articulo();
-                    articulo.idArticulo = (int)datos.Lector["ID_Articulo"];
-                    articulo.nombreArticulo = (string)datos.Lector["NombreArticulo"];
-                    articulo.descripcion = (string)datos.Lector["Descripcion"];
-                    articulo.categoria = new Categoria();
-                    articulo.categoria.idCategoria = (int)datos.Lector["ID_Categoria"];
-                    articulo.categoria.nombreCategoria = (string)datos.Lector["Categoria"];
-                    articulo.marca = new Marca();
-                    articulo.marca.idMarca = (int)datos.Lector["ID_Marca"];
-                    articulo.marca.nombreMarca = (string)datos.Lector["Marca"];
-                    articulo.precio = (decimal)datos.Lector["Precio"];
-                    articulo.stock = (int)datos.Lector["Stock"];
-                    articulo.talle = (string)datos.Lector["Talla"];
-                    articulo.Estado = (int)datos.Lector["Estado"];
-                    articulo.listaImagenes = new List<Imagen>(); ;
+                Articulo articulo = null;
 
-                    return articulo;
+                while (datos.Lector.Read())
+                {
+                    if (articulo == null)
+                    {
+                        articulo = new Articulo();
+                        articulo.idArticulo = (int)datos.Lector["ID_Articulo"];
+                        articulo.nombreArticulo = (string)datos.Lector["NombreArticulo"];
+                        articulo.descripcion = (string)datos.Lector["Descripcion"];
+                        articulo.categoria = new Categoria();
+                        articulo.categoria.idCategoria = (int)datos.Lector["ID_Categoria"];
+                        articulo.categoria.nombreCategoria = (string)datos.Lector["Categoria"];
+                        articulo.marca = new Marca();
+                        articulo.marca.idMarca = (int)datos.Lector["ID_Marca"];
+                        articulo.marca.nombreMarca = (string)datos.Lector["Marca"];
+                        articulo.precio = (decimal)datos.Lector["Precio"];
+                        articulo.stock = (int)datos.Lector["Stock"];
+                        articulo.talle = (string)datos.Lector["Talla"];
+                        articulo.Estado = (int)datos.Lector["Estado"];
+                        articulo.listaImagenes = new List<Imagen>();
+                    }
+
+                    if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Url_Imagen")))
+                    {
+                        Imagen imagen = new Imagen();
+                        imagen.UrlImagen = (string)datos.Lector["Url_Imagen"];
+                        articulo.listaImagenes.Add(imagen);
+                    }
                 }
-                return null;
+
+                return articulo;
             }
             catch (Exception ex)
             {
@@ -186,7 +197,8 @@ namespace Negocio
             try
             {
              ///datos.setConexion("SELECT A.ID_Articulo, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca WHERE C.NombreCategoria = @Categoria");
-             datos.setConexion("SELECT A.ID_Articulo as id, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, I.ID_Imagen, I.Url_Imagen as ImagenUrl, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca INNER JOIN Imagenes I on I.ID_Imagen = A.ID_Articulo WHERE C.NombreCategoria = @Categoria");
+             ///datos.setConexion("SELECT A.ID_Articulo as id, A.NombreArticulo, A.Descripcion, C.ID_Categoria ,C.NombreCategoria AS Categoria, M.ID_Marca ,M.NombreMarca AS Marca, I.ID_Imagen, I.Url_Imagen as ImagenUrl, A.Precio, A.Stock, A.Estado FROM Articulos A INNER JOIN Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca Right JOIN Imagenes I on I.ID_Articulo = A.ID_Articulo WHERE C.NombreCategoria = @Categoria");
+                datos.setConexion("SELECT A.ID_Articulo as id, A.NombreArticulo, A.Descripcion, C.ID_Categoria, C.NombreCategoria AS Categoria, M.ID_Marca, M.NombreMarca AS Marca, STRING_AGG(I.Url_Imagen, ';') AS Imagenes, A.Precio, A.Stock, A.Estado FROM  Articulos A INNER JOIN  Categorias C ON C.ID_Categoria = A.ID_Categoria INNER JOIN Marcas M ON M.ID_Marca = A.ID_Marca LEFT JOIN Imagenes I ON I.ID_Articulo = A.ID_Articulo WHERE C.NombreCategoria = @Categoria GROUP BY A.ID_Articulo, A.NombreArticulo, A.Descripcion, C.ID_Categoria, C.NombreCategoria, M.ID_Marca, M.NombreMarca, A.Precio, A.Stock, A.Estado ");
                 datos.setearParametro("@Categoria", categoria);
                 datos.abrirConexion();
                 while (datos.Lector.Read())
@@ -202,11 +214,19 @@ namespace Negocio
                     articulo.precio = (decimal)datos.Lector["Precio"];
                     articulo.stock = (int)datos.Lector["stock"];
                     articulo.listaImagenes = new List<Imagen>();
-                    if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("ImagenUrl")))
+                    if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Imagenes")))
                     {
-                        Imagen imagen = new Imagen();
+                        string imagenes = (string)datos.Lector["Imagenes"];
+                        string[] urls = imagenes.Split(';');
+                        foreach (string url in urls)
+                        {
+                            Imagen imagen = new Imagen();
+                            imagen.UrlImagen = url;
+                            articulo.listaImagenes.Add(imagen);
+                        }
+                        /*Imagen imagen = new Imagen();
                         imagen.UrlImagen = (string)datos.Lector["ImagenUrl"];
-                        articulo.listaImagenes.Add(imagen);
+                        articulo.listaImagenes.Add(imagen);*/
                     }
                     lista.Add(articulo);
                 }
