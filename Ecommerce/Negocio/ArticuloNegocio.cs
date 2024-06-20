@@ -53,6 +53,59 @@ namespace Negocio
             }
         }
 
+        public List<Articulo> BuscarPorMarca(int idMarca)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            MarcaNegocio marcaDB = new MarcaNegocio();
+            CategoriaNegocio categoriaDB = new CategoriaNegocio();
+
+            try
+            {
+                if (idMarca == 0)
+                {
+                    datos.setearConsulta("SELECT * FROM ARTICULOS");
+                }
+                else
+                {
+                    datos.setConexion("SELECT a.ID_Articulo, a.NombreArticulo, a.Descripcion, a.Precio, a.stock, a.Talla, i.Url_Imagen as ImagenUrl FROM ARTICULOS as a inner join Imagenes as i on i.ID_Articulo = a.ID_Articulo where a.ID_Marca = @IdMarca");
+                    datos.setearParametro("@IdMarca", idMarca);
+                    datos.abrirConexion();
+                }
+
+                while (datos.Lector.Read())
+                {
+                    Articulo articulo = new Articulo();
+                    articulo.idArticulo = (int)datos.Lector["ID_Articulo"];
+                    articulo.nombreArticulo = (string)datos.Lector["NombreArticulo"];
+                    articulo.descripcion = (string)datos.Lector["Descripcion"];
+                    articulo.precio = (decimal)datos.Lector["Precio"];
+                    articulo.stock = (int)datos.Lector["stock"];
+                    articulo.talle = (string)datos.Lector["Talla"];
+
+                    articulo.listaImagenes = new List<Imagen>();
+
+                    if (!datos.Lector.IsDBNull(datos.Lector.GetOrdinal("ImagenUrl")))
+                    {
+                        Imagen imagen = new Imagen();
+                        imagen.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                        articulo.listaImagenes.Add(imagen);
+                    }
+
+                    lista.Add(articulo);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public List<Articulo> BuscarPorNombre(string nombre)
         {
             List<Articulo> lista = new List<Articulo>();

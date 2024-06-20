@@ -28,5 +28,12 @@ namespace Dominio
         public List<Imagen> listaImagenes { get; set; }
 
         public int Cantidad { get; set; }
+
+
+
+        public Articulo()
+        {
+            listaImagenes = new List<Imagen>();
+        }
     }
 }

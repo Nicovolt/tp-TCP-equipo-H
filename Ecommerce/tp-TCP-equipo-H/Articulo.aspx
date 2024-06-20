@@ -49,6 +49,10 @@
     </style>
     <asp:Label ID="Label1" CssClass="lblArticulo" Text="" runat="server" />    
     <asp:Label ID="lblArticulo" CssClass="lblArticulo" Text="" runat="server" />
+    <asp:DropDownList ID="ddlMarca" runat="server" CssClass="form-select">
+</asp:DropDownList>
+<asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" CssClass="btn btn-primary" OnClick="btnFiltrar_Click" />
+
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <asp:Repeater runat="server" ID="repeaterArticulos" OnItemCommand="repeaterArticulos_ItemCommand">
             <ItemTemplate>

@@ -14,6 +14,10 @@ namespace tp_TCP_equipo_H
         public List<Dominio.Articulo> ListArtculos = new List<Dominio.Articulo>();
         private ArticuloNegocio articulonegocio = new ArticuloNegocio();
 
+        public List<Dominio.Marca> ListMarca = new List<Dominio.Marca>();
+        private MarcaNegocio marcanegocio = new MarcaNegocio();
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,17 +26,39 @@ namespace tp_TCP_equipo_H
                 if (!string.IsNullOrEmpty(nombreArticulo))
                 {
                     lblArticulo.Text = nombreArticulo;
-                    
+
+                    // Obtener la lista de artículos según la categoría
                     ListArtculos = articulonegocio.buscarPorCategoria(nombreArticulo);
                     repeaterArticulos.DataSource = ListArtculos;
                     repeaterArticulos.DataBind();
+
+                    // Cargar las marcas disponibles en el DropDownList
+                    List<Marca> listaMarcas = marcanegocio.listarMarcas();
+                    ddlMarca.DataSource = listaMarcas;
+                    ddlMarca.DataTextField = "nombreMarca";
+                    ddlMarca.DataValueField = "idMarca";
+                    ddlMarca.DataBind();
+
+                    // Agregar opción de Todas las Marcas
+                    ddlMarca.Items.Insert(0, new ListItem("Todas las Marcas", "0"));
                 }
                 else
                 {
                     lblArticulo.Text = "Artículo no encontrado.";
                 }
             }
+        }
 
+        protected void btnFiltrar_Click(object sender, EventArgs e)
+        {
+
+
+            int idMarca = Convert.ToInt32(ddlMarca.SelectedValue);
+
+
+            ListArtculos = articulonegocio.BuscarPorMarca(idMarca);
+            repeaterArticulos.DataSource = ListArtculos;
+            repeaterArticulos.DataBind();
         }
         protected void repeaterArticulos_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
