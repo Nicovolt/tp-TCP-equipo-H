@@ -58,6 +58,25 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public void modificarConSP(Imagen imagen)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearSP("sp_ModificarImagen");
+                datos.setearParametro("@ID_Articulo", imagen.idArticulo);
+                datos.setearParametro("@ID_Imagen", imagen.idImagen);
+                datos.setearParametro("@Url_Imagen", imagen.UrlImagen);                
+                datos.setearParametro("@Estado", imagen.Estado = true);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { datos.cerrarConexion(); }
+        }
 
         public void EliminarImagen(int id, string url)
         {

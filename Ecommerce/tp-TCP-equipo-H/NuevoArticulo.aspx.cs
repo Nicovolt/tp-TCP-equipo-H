@@ -87,15 +87,14 @@ namespace tp_TCP_equipo_H
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
-                ImagenNegocio imagenNegocio = new ImagenNegocio();
+                Negocio.ImagenNegocio imagenNegocio = new Negocio.ImagenNegocio();
                 int idArticulo = 0;
                 if (Request.QueryString["id"] != null)
                 {
                     idArticulo = int.Parse(Request.QueryString["id"]);
                     nuevoArticulo.idArticulo = idArticulo;
                     articuloNegocio.modificarConSP(nuevoArticulo);
-                    Response.Redirect("ModificarArticulo.aspx", false);
-                    imagenNegocio.GuardarImagen(inpImagen.Text, idArticulo);
+                    Response.Redirect("ModificarArticulo.aspx", false);                    
                 }
                 else
                 {
