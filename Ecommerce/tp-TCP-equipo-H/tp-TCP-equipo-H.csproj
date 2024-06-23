@@ -84,6 +84,7 @@
     <Content Include="Imagenes\publi.jpg" />
     <Content Include="Imagenes\remeras.jpg" />
     <Content Include="Imagenes\sweater.jpg" />
+    <Content Include="ListadoPedidos.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="ModificarArticulo.aspx" />
     <Content Include="ModificarCategoria.aspx" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoPedidos.aspx.cs">
+      <DependentUpon>ListadoPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoPedidos.aspx.designer.cs">
+      <DependentUpon>ListadoPedidos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

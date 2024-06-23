@@ -15,7 +15,7 @@ namespace Negocio
             List<Pedido> lista = new List<Pedido>();
             try
             {
-                datos.setConexion("select p.ID_Pedido,p.ID_Usuario,p.Estado,SUM(dp.importe) as 'Importe',SUM(dp.cantidad) as 'Cantidad',p.NumeroEnvio,p.Proveedor from pedidos p left join detallePedidos dp on dp.ID_Pedido=p.ID_Pedido where dp.Estado=1 group by p.ID_Pedido,p.ID_Usuario,p.Estado,p.NumeroEnvio,p.Proveedor");
+                datos.setConexion("select p.ID_Pedido,p.ID_Usuario, p.Importe,p.Estado,p.cantidad from Pedidos p");
                 datos.abrirConexion();
                 while (datos.Lector.Read())
                 {
@@ -25,8 +25,6 @@ namespace Negocio
                     pedido.estado = (int)datos.Lector["Estado"];
                     pedido.importe = (decimal)datos.Lector["Importe"];
                     pedido.cantidad = (int)datos.Lector["Cantidad"];
-                    pedido.numeroEnvio = (string)datos.Lector["NumeroEnvio"];
-                    pedido.proveedor = (string)datos.Lector["Proveedor"];
                     lista.Add(pedido);
                 }
                 return lista;
@@ -40,6 +38,27 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
+        }
+        public int agregar(Pedido nuevo)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setConexion("INSERT INTO Pedidos (ID_Usuario, Importe, Estado, Cantidad) output inserted.ID_Pedido VALUES (@ID_Usuario, @Importe, @Estado, @Cantidad);");
+                datos.setearParametro("ID_Usuario", nuevo.idUsuario);
+                datos.setearParametro("Importe", nuevo.importe);                          
+                datos.setearParametro("@Estado", nuevo.estado);
+                datos.setearParametro("@Cantidad", nuevo.cantidad);
+                int ultimaFila = datos.ejecutarAccionConOutput();
+                return ultimaFila;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { datos.cerrarConexion(); }
         }
 
         public void actualizarEstado(int estado, int idPedido)

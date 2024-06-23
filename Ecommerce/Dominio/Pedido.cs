@@ -17,9 +17,5 @@ namespace Dominio
         public int estado { get; set; }
 
         public int cantidad { get; set; }
-
-        public string numeroEnvio { get; set; }
-
-        public string proveedor { get; set; }
     }
 }

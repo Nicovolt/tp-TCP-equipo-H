@@ -162,8 +162,13 @@ namespace tp_TCP_equipo_H
                     List<Dominio.Articulo> Compras = (List<Dominio.Articulo>)Session["CarritoCompras"];
                     Dominio.DetallePedido detallepedido = new Dominio.DetallePedido();
                     Dominio.Pedido pedido = new Dominio.Pedido();
-                    int NumerosArticulos = Compras.Count;
-                    decimal totalCarrito = decimal.Parse(Session["TotalCarrito"].ToString());
+                    PedidoNegocio pedidoNegocio = new PedidoNegocio();
+                    Dominio.Usuario usuario = (Dominio.Usuario)Session["usuario"];
+                    pedido.idUsuario = usuario.idUsuario;
+                    pedido.cantidad = Compras.Count;
+                    pedido.importe = decimal.Parse(Session["TotalCarrito"].ToString());
+                    pedido.estado = 1;
+                    int idpedido = pedidoNegocio.agregar(pedido);
 
                         foreach (Dominio.Articulo articulos in Compras)
                         {
