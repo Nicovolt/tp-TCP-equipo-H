@@ -71,6 +71,7 @@
     <Content Include="CarritoCompras.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DetalleArticulo.aspx" />
+    <Content Include="DetallePedido.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\buzos.jpg" />
@@ -84,7 +85,7 @@
     <Content Include="Imagenes\publi.jpg" />
     <Content Include="Imagenes\remeras.jpg" />
     <Content Include="Imagenes\sweater.jpg" />
-    <Content Include="ListadoPedidos.aspx" />
+    <Content Include="ListaPedidos.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="ModificarArticulo.aspx" />
     <Content Include="ModificarCategoria.aspx" />
@@ -125,6 +126,13 @@
     <Compile Include="DetalleArticulo.aspx.designer.cs">
       <DependentUpon>DetalleArticulo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DetallePedido.aspx.cs">
+      <DependentUpon>DetallePedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallePedido.aspx.designer.cs">
+      <DependentUpon>DetallePedido.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,12 +143,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ListadoPedidos.aspx.cs">
-      <DependentUpon>ListadoPedidos.aspx</DependentUpon>
+    <Compile Include="ListaPedidos.aspx.cs">
+      <DependentUpon>ListaPedidos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListadoPedidos.aspx.designer.cs">
-      <DependentUpon>ListadoPedidos.aspx</DependentUpon>
+    <Compile Include="ListaPedidos.aspx.designer.cs">
+      <DependentUpon>ListaPedidos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

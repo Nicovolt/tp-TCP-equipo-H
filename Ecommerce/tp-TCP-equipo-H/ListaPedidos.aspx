@@ -1,8 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="ListadoPedidos.aspx.cs" Inherits="tp_TCP_equipo_H.ListadoPedidos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="ListaPedidos.aspx.cs" Inherits="tp_TCP_equipo_H.ListaPedidos" EnableEventValidation="false" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <style>
+<style>
     .container {
         display: flex;
         justify-content: center;
@@ -41,38 +40,40 @@
         color: #fff; 
     }
 </style>
-    <div class="container">
-    
+</asp:Content>
 
-    <div class="table-container">
-        <h1 class="titulo-catalogo">Lista de Articulos</h1>
-        <table class="table table-bordered border-primary">
-            <thead>
-                <tr>
-                    <th>ID</th>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="container">
+        
+
+        <div class="table-container">
+            <h1 class="titulo-catalogo">Lista de Articulos</h1>
+            <table class="table table-bordered border-primary">
+                <thead>
+                    <tr>
+                        <th>ID</th>
                     <th>Usuario</th>
                     <th>Cantidad Articulos</th>
                     <th>Importe</th>
                     <th>Estado</th>
                     <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <asp:Repeater ID="repeaterPedidos" runat="server" OnItemCommand="repeaterPedidos_ItemCommand">
-                    <ItemTemplate>
-                        <tr>
-                            <td><%# Eval("idPedido") %></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <asp:Repeater ID="repeaterPedidos" runat="server" OnItemCommand="repeaterPedidos_ItemCommand">
+                        <ItemTemplate>
+                            <tr>
+                                <td><%# Eval("idPedido") %></td>
                             <td><%# Eval("idUsuario") %></td>
                             <td><%# Eval("cantidad") %></td>
                             <td><%# Eval("importe") %></td>
                             <td><%# Eval("estado") %></td>
                             <td>
-                                <asp:Button ID="btnVerDetallePedido" runat="server" Text="Ver detalle pedido" CommandArgument='<%# Eval("idPedido") %>' CommandName="idPeddo" CssClass="btn btn-primary" /></td>
-                        </tr>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </tbody>
-        </table>
+                                <asp:Button ID="btnVerDetallePedido" runat="server" CommandName="VerDetalleArticulo" CommandArgument='<%# Eval("idPedido") %>' Text="Ver detalle pedido"  CssClass="btn btn-primary" /></td></tr>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 </asp:Content>

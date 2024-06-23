@@ -47,9 +47,35 @@ namespace Negocio
             {
                 datos.setConexion("INSERT INTO Pedidos (ID_Usuario, Importe, Estado, Cantidad) output inserted.ID_Pedido VALUES (@ID_Usuario, @Importe, @Estado, @Cantidad);");
                 datos.setearParametro("ID_Usuario", nuevo.idUsuario);
-                datos.setearParametro("Importe", nuevo.importe);                          
+                datos.setearParametro("Importe", nuevo.importe);
                 datos.setearParametro("@Estado", nuevo.estado);
                 datos.setearParametro("@Cantidad", nuevo.cantidad);
+                int ultimaFila = datos.ejecutarAccionConOutput();
+                return ultimaFila;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { datos.cerrarConexion(); }
+        }
+        public int agregarDetallePedido(DetallePedido nuevo)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setConexion("INSERT INTO DetallePedidos (ID_Pedido, NombreArtculo, Descripcion,NombreCategoria, NombreMarca, Importe,Cantidad,Talle) output inserted.ID_DetallePedido VALUES (@ID_Pedido, @NombreArtculo, @Descripcion, @NombreCategoria, @NombreMarca, @Importe, @Cantidad, @Talle);");
+                datos.setearParametro("ID_Pedido", nuevo.idPedido);
+                datos.setearParametro("@NombreArtculo", nuevo.nombreArticulo);
+                datos.setearParametro("@Descripcion", nuevo.descripcion);
+                datos.setearParametro("@NombreCategoria", nuevo.nombreCategoria);
+                datos.setearParametro("@NombreMarca", nuevo.nombreMarca);
+                datos.setearParametro("Importe", nuevo.importe);
+                datos.setearParametro("@Cantidad", nuevo.cantidad);
+                datos.setearParametro("Talle", nuevo.talle);
+                ///datos.setearParametro("@Estado", nuevo.estado);
                 int ultimaFila = datos.ejecutarAccionConOutput();
                 return ultimaFila;
             }
@@ -82,25 +108,29 @@ namespace Negocio
             }
         }
 
-        public List<Articulo> listarDetallePedido(int idPedido)
+        public List<DetallePedido> listarDetallePedido(int idPedido)
         {
             AccesoDatos datos = new AccesoDatos();
-            List<Articulo> lista = new List<Articulo>();
+            List<DetallePedido> lista = new List<DetallePedido>();
             try
             {
-                datos.setConexion("select * from detallePedidos where id_Pedido=@idPedido");
+                datos.setConexion("select * from DetallePedidos where id_Pedido=@idPedido");
                 datos.setearParametro("idPedido", idPedido);
                 datos.abrirConexion();
                 while (datos.Lector.Read())
                 {
-                    Articulo articulo = new Articulo();
-                    articulo.idArticulo = (int)datos.Lector["ID_Articulo"];
-                    /*articulo.cantidad = (int)datos.Lector["Cantidad"];*/
-                    articulo.talle = (string)datos.Lector["Talle"];
-                    /*articulo.numeroPedido = (int)datos.Lector["ID_Pedido"];*/
-                    articulo.precio = (decimal)datos.Lector["Importe"];
-                    articulo.Estado = (int)datos.Lector["Estado"];
-                    lista.Add(articulo);
+                    Dominio.DetallePedido detallepedido = new Dominio.DetallePedido();
+                    detallepedido.idDetallePedido = (int)datos.Lector["ID_DetallePedido"];
+                    detallepedido.idPedido = (int)datos.Lector["ID_Pedido"];
+                    detallepedido.nombreArticulo = (string)datos.Lector["NombreArtculo"];
+                    detallepedido.descripcion = (string)datos.Lector["Descripcion"];
+                    detallepedido.nombreCategoria = (string)datos.Lector["NombreCategoria"];
+                    detallepedido.nombreMarca = (string)datos.Lector["NombreMarca"];
+                    detallepedido.importe = (decimal)datos.Lector["Importe"];
+                    detallepedido.cantidad = (int)datos.Lector["Cantidad"];
+                    detallepedido.talle = (string)datos.Lector["Talle"];
+                    detallepedido.estado = (int)datos.Lector["Estado"];
+                    lista.Add(detallepedido);
                 }
                 return lista;
             }
@@ -123,7 +153,7 @@ namespace Negocio
                 {
                     DetallePedido detallePedido = new DetallePedido();
                     detallePedido.idPedido = (int)datos2.Lector["ID_Pedido"];
-                    detallePedido.nombreUsuario = (string)datos2.Lector["NombreUsuario"];
+                    detallePedido.nombreCategoria = (string)datos2.Lector["NombreCategora"];
                     detallePedido.nombreArticulo = (string)datos2.Lector["NombreArticulo"];
                     detallePedido.nombreMarca = (string)datos2.Lector["NombreMarca"];
                     detallePedido.talle = (string)datos2.Lector["Talle"];

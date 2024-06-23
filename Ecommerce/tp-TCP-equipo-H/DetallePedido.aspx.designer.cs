@@ -11,16 +11,16 @@ namespace tp_TCP_equipo_H
 {
 
 
-    public partial class ListadoPedidos
+    public partial class DetallePedido
     {
 
         /// <summary>
-        /// Control repeaterPedidos.
+        /// Control repeaterDetallesPedido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repeaterPedidos;
+        protected global::System.Web.UI.WebControls.Repeater repeaterDetallesPedido;
     }
 }

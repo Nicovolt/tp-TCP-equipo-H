@@ -172,13 +172,15 @@ namespace tp_TCP_equipo_H
 
                         foreach (Dominio.Articulo articulos in Compras)
                         {
-                            //detallepedido.nombreUsuario = NombreUsuaruio;
+                            detallepedido.idPedido = idpedido;
                             detallepedido.nombreArticulo = articulos.nombreArticulo;
-                            detallepedido.nombreMarca = articulos.marca.nombreMarca;
                             detallepedido.descripcion = articulos.descripcion;
+                            detallepedido.nombreCategoria = articulos.categoria.nombreCategoria;
+                            detallepedido.nombreMarca = articulos.marca.nombreMarca;
                             detallepedido.cantidad = articulos.Cantidad;
                             detallepedido.talle = articulos.talle;
                             detallepedido.importe = articulos.Cantidad * articulos.precio;
+                            pedidoNegocio.agregarDetallePedido(detallepedido);
                         }                                        
                 }
             }         

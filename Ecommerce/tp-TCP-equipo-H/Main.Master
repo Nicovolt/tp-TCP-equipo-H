@@ -280,7 +280,7 @@
                                 <li><a href="ModificarCategoria.aspx">Modificar Categoria</a></li>
                                 <li><a href="ModificarMarca.aspx">Modificar Marca</a></li>
                                 <li><a href="ModificarArticulo.aspx">Modificar Articulo</a></li>
-                                <li><a href="ListadoPedidos.aspx">Lista de Pedidos</a></li>
+                                <li><a href="ListaPedidos.aspx">Lista de Pedidos</a></li>
                             </ul>
                         </li>
                         <%if (Session["usuario"] != null)
