@@ -181,6 +181,9 @@ namespace tp_TCP_equipo_H
                             detallepedido.talle = articulos.talle;
                             detallepedido.importe = articulos.Cantidad * articulos.precio;
                             pedidoNegocio.agregarDetallePedido(detallepedido);
+                            articulos.stock = articulos.stock - articulos.Cantidad;
+                            articulos.Cantidad = 0;
+                            articuloNegocio.modificarConSP(articulos);
                         }                                        
                 }
             }         
