@@ -287,6 +287,8 @@
                           {%>
      
                             <li><a href="Login.aspx"><i class="bi bi-person-gear" runat="server"></i>Administrar Cuenta</a></li>
+                            <li><a href="EnvioGmail.aspx"><i class="bi bi-person-gear" runat="server"></i>Ayuda</a></li>
+
     
                         <%}%>
                    
