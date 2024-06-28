@@ -75,6 +75,7 @@
                             <td><%# Eval("cantidad") %></td>
                             <td><%# Eval("talle") %></td>
                             <td><%# Eval("Estado")%></td>
+                        </tr>
                     </ItemTemplate>
                 </asp:Repeater>
             </tbody>

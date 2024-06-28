@@ -39,6 +39,37 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public Pedido listarPorID(int idPedido)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Pedido pedido = new Pedido();
+            try
+            {
+                datos.setConexion("select * from Pedidos where id_Pedido=@idPedido");
+                datos.setearParametro("idPedido", idPedido);
+                datos.abrirConexion();
+                while (datos.Lector.Read())
+                {
+                    
+                    pedido.idPedido = (int)datos.Lector["ID_Pedido"];
+                    pedido.idUsuario = (int)datos.Lector["ID_Usuario"];
+                    pedido.estado = (int)datos.Lector["Estado"];
+                    pedido.importe = (decimal)datos.Lector["Importe"];
+                    pedido.cantidad = (int)datos.Lector["Cantidad"];
+                    
+                }
+                return pedido;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
         public int agregar(Pedido nuevo)
         {
 
@@ -208,6 +239,26 @@ namespace Negocio
             catch (Exception ex)
             {
 
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void actualizarEstadoPedido(int idPedido, int nuevoEstado)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setConexion("update Pedidos set Estado = @nuevoEstado where ID_Pedido = @idPedido");
+                datos.setearParametro("@nuevoEstado", nuevoEstado);
+                datos.setearParametro("@idPedido", idPedido);
+                datos.abrirConexion();
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
             finally

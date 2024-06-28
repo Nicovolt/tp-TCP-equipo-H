@@ -43,33 +43,48 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="container">
         
+    <div class="container">
 
-        <div class="table-container">
-            <h1 class="titulo-catalogo">Lista de Articulos</h1>
-            <table class="table table-bordered border-primary">
-                <thead>
-                    <tr>
-                        <th>ID</th>
+
+    <div class="table-container">
+        <h1 class="titulo-catalogo">Lista de Articulos</h1>
+
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr>
+                    <th>ID</th>
                     <th>Usuario</th>
                     <th>Cantidad Articulos</th>
                     <th>Importe</th>
                     <th>Estado</th>
                     <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <asp:Repeater ID="repeaterPedidos" runat="server" OnItemCommand="repeaterPedidos_ItemCommand">
-                        <ItemTemplate>
-                            <tr>
-                                <td><%# Eval("idPedido") %></td>
+                </tr>
+            </thead>
+            <tbody>
+                <asp:Repeater ID="repeaterPedidos" runat="server" OnItemCommand="repeaterPedidos_ItemCommand" OnItemDataBound="repeaterPedidos_ItemDataBound">
+                    <ItemTemplate>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblIDPedido" runat="server" Text='<%# Eval("idPedido") %>' Visible="false" /><%# Eval("idPedido") %></td>
                             <td><%# Eval("idUsuario") %></td>
                             <td><%# Eval("cantidad") %></td>
                             <td><%# Eval("importe") %></td>
-                            <td><%# Eval("estado") %></td>
                             <td>
-                                <asp:Button ID="btnVerDetallePedido" runat="server" CommandName="VerDetalleArticulo" CommandArgument='<%# Eval("idPedido") %>' Text="Ver detalle pedido"  CssClass="btn btn-primary" /></td></tr>
+                                <div class="mb-3">
+                                    <asp:DropDownList runat="server" ID="ddlEstado" CssClass="form-select" AutoPostBack="true" OnSelectedIndexChanged="ddlEstado_SelectedIndexChanged">
+                                        <asp:ListItem Text="Seleccione El estado" Value="" />
+                                        <asp:ListItem Text="Pendiente" Value="1" />
+                                        <asp:ListItem Text="Preparando" Value="2" />
+                                        <asp:ListItem Text="Listo" Value="3" />
+                                        <asp:ListItem Text="Entregado" Value="4" />
+                                    </asp:DropDownList>
+                                        <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <asp:Button ID="btnVerDetallePedido" runat="server" CommandName="VerDetalleArticulo" CommandArgument='<%# Eval("idPedido") %>' Text="Ver detalle pedido" CssClass="btn btn-primary" /></td>
+                            </tr>
                         </ItemTemplate>
                     </asp:Repeater>
                 </tbody>
@@ -77,3 +92,4 @@
         </div>
     </div>
 </asp:Content>
+
