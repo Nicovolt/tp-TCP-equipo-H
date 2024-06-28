@@ -140,9 +140,10 @@ namespace Negocio
             try
             {
 
-                datos.setConexion("update Usuarios set NombreUsuario=@NewUser where NombreUsuario=@NombreUsuario");
+                datos.setConexion("update Usuarios set NombreUsuario=@NewUser where NombreUsuario=@NombreUsuario and Pass=@pass");
                 datos.setearParametro("@NombreUsuario", user.User);
                 datos.setearParametro("@NewUser", user.UserNew);
+                datos.setearParametro("@pass", user.Pass);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -165,10 +166,11 @@ namespace Negocio
             try
             {
 
-                datos.setConexion("update Usuarios set Mail=@NewMail where NombreUsuario=@NombreUsuario and Mail = @OldMail");
+                datos.setConexion("update Usuarios set Mail=@NewMail where NombreUsuario=@NombreUsuario and Mail = @OldMail and Pass=@pass");
                 datos.setearParametro("@NombreUsuario", user.User);
                 datos.setearParametro("@NewMail", user.MailNew);
                 datos.setearParametro("@OldMail", user.Mail);
+                datos.setearParametro("@pass", user.Pass);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

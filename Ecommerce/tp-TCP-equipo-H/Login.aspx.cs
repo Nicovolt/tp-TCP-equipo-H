@@ -35,10 +35,10 @@ namespace tp_TCP_equipo_H
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                Session.Add("error", ex.ToString());
+                Session.Add("error", "user o pass incorrectos");
                 Response.Redirect("Error.aspx");
             }
         }
@@ -66,11 +66,11 @@ namespace tp_TCP_equipo_H
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                Session.Add("error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                Session.Add("error", "no se pudo registrar correctamente");
+                Response.Redirect("Error.aspx", false);
             }
         }
 
@@ -82,14 +82,16 @@ namespace tp_TCP_equipo_H
             UsuarioNegocio negocio = new UsuarioNegocio();
             try
             {
-                usuario = new Usuario(txtNomUsuarioContra.Text, txtContraceñaAntigua.Text, txtContraceñaNueva.Text);
+                Usuario usuarioEnSesion = (Usuario)Session["usuario"];
+                string nombreUsuario = usuarioEnSesion.User;
+                usuario = new Usuario(nombreUsuario, txtContraceñaAntigua.Text, txtContraceñaNueva.Text);
                 negocio.resetContraseña(usuario);
-
+                Response.Redirect("Default.aspx");
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Session.Add("error", ex.ToString());
+                Session.Add("error", "contraceña incorrecta");
                 Response.Redirect("Error.aspx");
             }
         }
@@ -100,14 +102,16 @@ namespace tp_TCP_equipo_H
             UsuarioNegocio negocio = new UsuarioNegocio();
             try
             {
-                usuario = new Usuario(txtUserCambio.Text, txtUserNuevo.Text);
+                Usuario usuarioEnSesion = (Usuario)Session["usuario"];
+                string nombreUsuario = usuarioEnSesion.User;
+                usuario = new Usuario(nombreUsuario, txtUserNuevo.Text, txtUserCambioContraseña.Text,1,1);
                 negocio.resetUsuario(usuario);
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Session.Add("error", ex.ToString());
+                Session.Add("error", "Contraceña  incorrecta");
                 Response.Redirect("Error.aspx");
             }
         }
@@ -117,15 +121,17 @@ namespace tp_TCP_equipo_H
             Usuario usuario;
             UsuarioNegocio negocio = new UsuarioNegocio();
             try
-            {                        
-                usuario = new Usuario(txtUserMail.Text, txtGmail.Text, txtGmailNuevo.Text, 1);
+            {
+                Usuario usuarioEnSesion = (Usuario)Session["usuario"];
+                string nombreUsuario = usuarioEnSesion.User;
+                usuario = new Usuario(nombreUsuario, txtGmail.Text, txtGmailNuevo.Text, 1,txtUserMailcontraseña.Text,1);
                 negocio.resetGmail(usuario);
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Session.Add("error", ex.ToString());
+                Session.Add("error", "Contraceña y/o gmail  incorrectos");
                 Response.Redirect("Error.aspx");
             }
         }

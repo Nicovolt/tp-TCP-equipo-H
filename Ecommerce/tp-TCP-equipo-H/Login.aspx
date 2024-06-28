@@ -99,10 +99,7 @@
             <section class="contenedor3">
             <div class="form-contenedor3">
                 <h1>Cambiar contraseña</h1>
-                <div class="mb-3">
-                    <label class="form-label">Nombre de usuario</label>
-                    <asp:TextBox runat="server" ID="txtNomUsuarioContra" placeholder="" CssClass="form-control" />
-                </div>
+               
                 <div class="mb-3" cssclas="form-floating mb-3">
                     <label class="form-label">Contraseña antigua</label>
                     <asp:TextBox runat="server" ID="txtContraceñaAntigua" placeholder="" CssClass="form-control" />
@@ -119,8 +116,8 @@
             <div class="form-contenedor4">
                 <h1>Cambiar nombre de usuario</h1>
                 <div class="mb-3">
-                    <label class="form-label">Nombre de usuario</label>
-                    <asp:TextBox runat="server" ID="txtUserCambio" placeholder="" CssClass="form-control" />
+                    <label class="form-label">Contraseña</label>
+                    <asp:TextBox runat="server" ID="txtUserCambioContraseña" placeholder="" CssClass="form-control" />
                 </div>
                 <div class="mb-3" cssclas="form-floating mb-3">
                     <label class="form-label">Nombre de usuario nuevo</label>
@@ -134,9 +131,9 @@
             <div class="form-contenedor5">
                 <h1>Cambiar Gmail</h1>
                 <div class="mb-3">
-                    <label class="form-label">Usuario</label>
-                    <asp:TextBox runat="server" ID="txtUserMail" placeholder="" CssClass="form-control" />
-                </div>
+                    <label class="form-label">Contraseña</label>
+                    <asp:TextBox runat="server" ID="txtUserMailcontraseña" placeholder="" CssClass="form-control" />
+                </div>                              
                 <div class="mb-3" cssclas="form-floating mb-3">
                     <label class="form-label">Gmail</label>
                     <asp:TextBox runat="server" ID="txtGmail" placeholder="" CssClass="form-control" />

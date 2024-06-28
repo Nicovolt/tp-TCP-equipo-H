@@ -57,19 +57,21 @@ namespace Dominio
             PassNew = passNueva;
         }
 
-        public Usuario(string user, string nuevoUser)
+        public Usuario(string user, string nuevoUser,string cont,int o, int a)
         {
 
             User = user;
             UserNew = nuevoUser;
+            Pass = cont; 
         }
 
-        public Usuario(string user, string mail, string nuevoMail, int p)
+        public Usuario(string user, string mail, string nuevoMail,int a,string cont,int ff)
         {
 
             User = user;
             Mail = mail;
             MailNew = nuevoMail;
+            Pass = cont;
         }
     }
 

@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\enviogmail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\enviogmail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF4B624-1A98-4FA7-AE1C-BAC788FBCB02}|Dominio\\Dominio.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF4B624-1A98-4FA7-AE1C-BAC788FBCB02}|Dominio\\Dominio.csproj|solutionrelative:dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\negocio\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\enviogmail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\enviogmail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\negocio\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F8CD049-DF97-44FD-93F4-DDC470A40C46}|Negocio\\Negocio.csproj|solutionrelative:negocio\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\enviogmail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\enviogmail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\enviogmail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|c:\\users\\nicolas\\documents\\github\\tp-tcp-equipo-h\\ecommerce\\tp-tcp-equipo-h\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|solutionrelative:tp-tcp-equipo-h\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5802057-EE76-4641-ABF4-9A17B67DC639}|tp-TCP-equipo-H\\tp-TCP-equipo-H.csproj|C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-tcp-equipo-h\\articulo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -42,37 +54,50 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EnvioGmail.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\EnvioGmail.aspx.cs",
-              "RelativeDocumentMoniker": "tp-TCP-equipo-H\\EnvioGmail.aspx.cs",
-              "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\EnvioGmail.aspx.cs",
-              "RelativeToolTip": "tp-TCP-equipo-H\\EnvioGmail.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAQAAAA",
+              "DocumentIndex": 0,
+              "Title": "UsuarioNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\UsuarioNegocio.cs",
+              "RelativeDocumentMoniker": "Negocio\\UsuarioNegocio.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\UsuarioNegocio.cs",
+              "RelativeToolTip": "Negocio\\UsuarioNegocio.cs",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAEwKgAAACDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:13:02.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\EmailService.cs",
-              "RelativeDocumentMoniker": "Negocio\\EmailService.cs",
-              "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\EmailService.cs",
-              "RelativeToolTip": "Negocio\\EmailService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T20:48:07.089Z",
+              "WhenOpened": "2024-06-28T21:56:49.983Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Dominio\\Usuario.cs",
+              "RelativeDocumentMoniker": "Dominio\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Dominio\\Usuario.cs",
+              "RelativeToolTip": "Dominio\\Usuario.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAWwEkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:58:20.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Login.aspx.cs",
+              "RelativeToolTip": "tp-TCP-equipo-H\\Login.aspx.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAQwH8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:56:34.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Login.aspx",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Login.aspx",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Login.aspx",
@@ -85,7 +110,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "EnvioGmail.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\EnvioGmail.aspx.cs",
+              "RelativeDocumentMoniker": "tp-TCP-equipo-H\\EnvioGmail.aspx.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\EnvioGmail.aspx.cs",
+              "RelativeToolTip": "tp-TCP-equipo-H\\EnvioGmail.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T21:13:02.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\EmailService.cs",
+              "RelativeDocumentMoniker": "Negocio\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\EmailService.cs",
+              "RelativeToolTip": "Negocio\\EmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T20:48:07.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "EnvioGmail.aspx",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\EnvioGmail.aspx",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\EnvioGmail.aspx",
@@ -93,12 +143,11 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\EnvioGmail.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-27T21:07:54.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T21:07:54.104Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AccesoDatos.cs",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\Negocio\\AccesoDatos.cs",
               "RelativeDocumentMoniker": "Negocio\\AccesoDatos.cs",
@@ -111,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Default.aspx",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Default.aspx",
@@ -124,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Main.Master",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Main.Master",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Main.Master",
@@ -137,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Articulo.aspx",
               "DocumentMoniker": "C:\\Users\\Nicolas\\Documents\\GitHub\\tp-TCP-equipo-H\\Ecommerce\\tp-TCP-equipo-H\\Articulo.aspx",
               "RelativeDocumentMoniker": "tp-TCP-equipo-H\\Articulo.aspx",
@@ -145,8 +194,7 @@
               "RelativeToolTip": "tp-TCP-equipo-H\\Articulo.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-19T18:42:03.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T18:42:03.972Z"
             }
           ]
         }

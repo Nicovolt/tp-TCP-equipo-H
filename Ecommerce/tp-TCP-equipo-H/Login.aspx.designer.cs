@@ -15,15 +15,6 @@ namespace tp_TCP_equipo_H
     {
 
         /// <summary>
-        /// Control txtNomUsuarioContra.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomUsuarioContra;
-
-        /// <summary>
         /// Control txtContraceñaAntigua.
         /// </summary>
         /// <remarks>
@@ -51,13 +42,13 @@ namespace tp_TCP_equipo_H
         protected global::System.Web.UI.WebControls.Button btnCambiarContra;
 
         /// <summary>
-        /// Control txtUserCambio.
+        /// Control txtUserCambioContraseña.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserCambio;
+        protected global::System.Web.UI.WebControls.TextBox txtUserCambioContraseña;
 
         /// <summary>
         /// Control txtUserNuevo.
@@ -78,13 +69,13 @@ namespace tp_TCP_equipo_H
         protected global::System.Web.UI.WebControls.Button btnCambiarNombreUser;
 
         /// <summary>
-        /// Control txtUserMail.
+        /// Control txtUserMailcontraseña.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserMail;
+        protected global::System.Web.UI.WebControls.TextBox txtUserMailcontraseña;
 
         /// <summary>
         /// Control txtGmail.
