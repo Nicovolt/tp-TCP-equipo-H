@@ -63,6 +63,7 @@ namespace tp_TCP_equipo_H
                 string.IsNullOrWhiteSpace(ddlEstado.SelectedValue) ||
                 string.IsNullOrWhiteSpace(ddlTalla.SelectedValue) ||
                 string.IsNullOrWhiteSpace(inpImagen.Text))
+
             {
                 lblError.Text = "Todos los campos son obligatorios.";
                 return;
@@ -122,6 +123,8 @@ namespace tp_TCP_equipo_H
             {
                 lblError.Text = "Error: " + ex.Message;
             }
+
+            Response.Redirect("Default.aspx");
         }
     }
 }

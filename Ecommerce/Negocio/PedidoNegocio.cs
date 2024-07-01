@@ -77,8 +77,8 @@ namespace Negocio
             try
             {
                 datos.setConexion("INSERT INTO Pedidos (ID_Usuario, Importe, Estado, Cantidad) output inserted.ID_Pedido VALUES (@ID_Usuario, @Importe, @Estado, @Cantidad);");
-                datos.setearParametro("ID_Usuario", nuevo.idUsuario);
-                datos.setearParametro("Importe", nuevo.importe);
+                datos.setearParametro("@ID_Usuario", nuevo.idUsuario);
+                datos.setearParametro("@Importe", nuevo.importe);
                 datos.setearParametro("@Estado", nuevo.estado);
                 datos.setearParametro("@Cantidad", nuevo.cantidad);
                 int ultimaFila = datos.ejecutarAccionConOutput();
@@ -97,15 +97,12 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setConexion("INSERT INTO DetallePedidos (ID_Pedido, NombreArtculo, Descripcion,NombreCategoria, NombreMarca, Importe,Cantidad,Talle) output inserted.ID_DetallePedido VALUES (@ID_Pedido, @NombreArtculo, @Descripcion, @NombreCategoria, @NombreMarca, @Importe, @Cantidad, @Talle);");
-                datos.setearParametro("ID_Pedido", nuevo.idPedido);
-                datos.setearParametro("@NombreArtculo", nuevo.nombreArticulo);
-                datos.setearParametro("@Descripcion", nuevo.descripcion);
-                datos.setearParametro("@NombreCategoria", nuevo.nombreCategoria);
-                datos.setearParametro("@NombreMarca", nuevo.nombreMarca);
-                datos.setearParametro("Importe", nuevo.importe);
+                datos.setConexion("INSERT INTO DetallePedidos (ID_Pedido, ID_Articulo, Importe,Cantidad,Talle,Estado) output inserted.ID_Registro VALUES (@ID_Pedido,@ID_Articulo ,@Importe, @Cantidad, @Talle,1);");
+                datos.setearParametro("@ID_Pedido", nuevo.idPedido);
+                datos.setearParametro("@ID_Articulo", nuevo.idArticulo);
+                datos.setearParametro("@Importe", nuevo.importe);
                 datos.setearParametro("@Cantidad", nuevo.cantidad);
-                datos.setearParametro("Talle", nuevo.talle);
+                datos.setearParametro("@Talle", nuevo.talle);
                 ///datos.setearParametro("@Estado", nuevo.estado);
                 int ultimaFila = datos.ejecutarAccionConOutput();
                 return ultimaFila;
