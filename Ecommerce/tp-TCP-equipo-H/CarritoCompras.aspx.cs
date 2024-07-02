@@ -191,7 +191,8 @@ namespace tp_TCP_equipo_H
 
                         }                                        
                 }
-            }         
+            }
+            Response.Redirect("Compra.aspx");
         }
     }
 }
