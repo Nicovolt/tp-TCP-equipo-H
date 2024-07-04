@@ -18,20 +18,17 @@ namespace tp_TCP_equipo_H
 
         protected void btnGmailAyuda_Click(object sender, EventArgs e)
         {
-            EmailService EmailService = new EmailService();
-
-
+            ServicioEmail EmailService = new ServicioEmail();
             EmailService.armarCorreo(txtGmail.Text, txtAsuntiGmail.Text, txtCuerpo.Text);
             try
             {
-                EmailService.enviarEmail();
+                EmailService.enviarMail();
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                
+                throw new Exception("Error al enviar el correo: " + ex.Message, ex);
             }
-
         }
     }
 }

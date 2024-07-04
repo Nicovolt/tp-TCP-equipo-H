@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    internal class ServicioEmail
+    public class ServicioEmail
     {
         private SmtpClient server;
         private MailMessage mail;
@@ -16,10 +16,10 @@ namespace Negocio
         public ServicioEmail()
         {
             server = new SmtpClient();
-            server.Credentials = new NetworkCredential("90a1b3d2a55fe2", "8f9b2d2ad821fc");
+            server.Credentials = new NetworkCredential("5.3.pereznicolas@gmail.com", "xcib wejn uzkh efxh");
             server.EnableSsl = true;
-            server.Port = 587;
-            server.Host = "sandbox.smtp.mailtrap.io";
+            server.Port = 587; 
+            server.Host = "smtp.gmail.com";
         }
 
         public void armarCorreo(string destino, string asunto, string cuerpo)
@@ -39,8 +39,8 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                // Agregar un mensaje más descriptivo al error
+                throw new Exception("Error al enviar el correo: " + ex.Message, ex);
             }
         }
     }
