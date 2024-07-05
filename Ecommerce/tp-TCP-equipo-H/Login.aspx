@@ -102,11 +102,11 @@
                
                 <div class="mb-3" cssclas="form-floating mb-3">
                     <label class="form-label">Contraseña antigua</label>
-                    <asp:TextBox runat="server" ID="txtContraceñaAntigua" placeholder="" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtContraceñaAntigua" placeholder="" CssClass="form-control" TextMode="Password" />
                 </div>
                 <div class="mb-3" cssclas="form-floating mb-3">
                     <label class="form-label">Contraseña nueva</label>
-                    <asp:TextBox runat="server" ID="txtContraceñaNueva" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtContraceñaNueva" CssClass="form-control" TextMode="Password"/>
                 </div>
                 <asp:Button Text="Cambiar" runat="server" ID="btnCambiarContra" onclick="btnCambiarContra_Click" CssClass="btn btn-primary" />
             </div>
@@ -132,7 +132,7 @@
                 <h1>Cambiar Gmail</h1>
                 <div class="mb-3">
                     <label class="form-label">Contraseña</label>
-                    <asp:TextBox runat="server" ID="txtUserMailcontraseña" placeholder="" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtUserMailcontraseña" placeholder="" CssClass="form-control" TextMode="Password" />
                 </div>                              
                 <div class="mb-3" cssclas="form-floating mb-3">
                     <label class="form-label">Gmail</label>
@@ -156,7 +156,7 @@
                 </div>
                 <div class="mb-3" cssclas="form-floating mb-3">
                     <label class="form-label">Password</label>
-                    <asp:TextBox runat="server" ID="txtPassword" placeholder="Password" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtPassword" placeholder="Password" CssClass="form-control" TextMode="Password" />
                 </div>
                 <div>
                     <asp:Button Text="Ingresar" runat="server" ID="btnIngresar" OnClick="btnIngresar_Click" CssClass="btn btn-outline-light" />
@@ -189,7 +189,7 @@
                 </div>
                 <div class="mb-3" cssclas="form-floating mb-3">
                     <label class="form-label">Contraseña</label>
-                    <asp:TextBox runat="server" ID="txtContraceña" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtContraceña" CssClass="form-control" TextMode="Password" />
                 </div>
                 <asp:Button Text="Registrar" runat="server" ID="btnRegistrar" onclick="btnRegistrar_Click" CssClass="btn btn-primary" />
             </div>

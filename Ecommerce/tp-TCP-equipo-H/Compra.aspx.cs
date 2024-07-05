@@ -16,7 +16,14 @@ namespace tp_TCP_equipo_H
 
         protected void btnEntregaContinuar_Click(object sender, EventArgs e)
         {
-            Dominio.Pedido pedido = new Dominio.Pedido();
+           Negocio.ServicioEmail servicioEmail = new Negocio.ServicioEmail();
+
+           string nombre = txtNombre.Text;
+           string apellido = txtApellido.Text;
+           string mailUsuario = txtMail.Text;
+           string telefono = txtTelefono.Text;
+
+           servicioEmail.ConfirmarCompra(mailUsuario,nombre,apellido,telefono);
 
         }
     }
