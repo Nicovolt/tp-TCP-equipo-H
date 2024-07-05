@@ -16,7 +16,10 @@ namespace tp_TCP_equipo_H
 
         protected void btnEntregaContinuar_Click(object sender, EventArgs e)
         {
+            Dominio.Pedido pedido = new Dominio.Pedido();
 
         }
     }
+
+    
 }

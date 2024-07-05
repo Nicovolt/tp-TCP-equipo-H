@@ -45,7 +45,7 @@
         <div class="mb-3" cssclas="form-floating mb-3">
             <label class="form-label">pais</label>
              <asp:DropDownList runat="server" ID="DropDownList1">
-             <asp:ListItem Text="Argenitna" />
+             <asp:ListItem Text="Argentina" />
              <asp:ListItem Text="Chile" />
                  <asp:ListItem Text="Peru" />
                  <asp:ListItem Text="Uruguay" />
@@ -55,7 +55,7 @@
                  <asp:ListItem Text="Peru" />
                  <asp:ListItem Text="Venezuela" />
                  <asp:ListItem Text="Colombia" />
-                 <asp:ListItem Text="Volivia" />
+                 <asp:ListItem Text="Bolivia" />
                  </asp:DropDownList>
         </div>
 
@@ -71,8 +71,12 @@
            </div>
             <div class="mb-3" cssclas="form-floating mb-3">
             <label class="form-label">Telefono</label>
-           <asp:TextBox runat="server" ID="txtTelefono" CssClass="form-control" />
+           <asp:TextBox runat="server" ID="txtTelefono" CssClass="form-control" TextMode="Phone" />
            </div>
+         <div class="mb-3" cssclas="form-floating mb-3">
+         <label class="form-label">Correo electronico</label>
+          <asp:TextBox runat="server" ID="txtMail" CssClass="form-control" TextMode="Email" />
+        </div>
         
 
 
@@ -83,7 +87,7 @@
 
             <section class="contenedor2">
     <div class="form-contenedor2">
-        <h1>Metodo depagos</h1>
+        <h1>Metodo de pagos</h1>
        
         <div class="mb-3" cssclas="form-floating mb-3">
             <asp:CheckBox Text="Transferencia" runat="server" />

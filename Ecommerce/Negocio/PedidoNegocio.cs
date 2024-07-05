@@ -263,5 +263,11 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void cambiarEstado(int idPedido) { 
+            
+        
+        
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace tp_TCP_equipo_H
                 List<Dominio.Articulo> Newcarrito = new List<Dominio.Articulo>();
                 Session.Add("CarritoCompras", Newcarrito);
             }
-
+            actualizarTotalCarrito();
             if (!IsPostBack)
             {
                 CargarCarrito();
@@ -187,12 +187,12 @@ namespace tp_TCP_equipo_H
                             articulos.Cantidad = 0;
                             articuloNegocio.modificarConSP(articulos);
                             Session["CarritoCompras"] = null;
-                            Response.Redirect("Default.aspx");
-
+                            Response.Redirect("Compra.aspx");
+                            
                         }                                        
                 }
             }
-            Response.Redirect("Compra.aspx");
+            
         }
     }
 }
