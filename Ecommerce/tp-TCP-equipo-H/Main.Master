@@ -2,6 +2,9 @@
 
 <!DOCTYPE html>
 <style>
+    .header {
+        margin-top: 0;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -15,6 +18,7 @@
     }
 
     .wrapper {
+        margin-top: 0;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -24,81 +28,83 @@
         flex: 1;
     }
 
-    .navegacion {
-        width: 100%;
-        margin: 0 auto;
-        background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
-        color: white;
-        box-shadow: 0 0 6px 0 rgb(0, 0, 0);
-    }
+  .navegacion {
+    width: 100%;
+    margin: 0 auto; /* Para centrar horizontalmente */
+    background: black;
+    color: white;
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0);
+    text-align: center; /* Para centrar los elementos internos */
+}
 
-        .navegacion ul {
-            list-style: none;
-            text-align: right;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 0;
-        }
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 10px; /* Espacio entre el header y los elementos del menú */
+}
 
-    .menu > li {
-        display: inline-flex;
-        align-items: center;
-        position: relative;
-    }
+.menu > li {
+    position: relative;
+    margin-right: 20px; /* Espacio entre los elementos del menú */
+}
 
-        .menu > li > a {
-            display: block;
-            padding: 15px 20px;
-            text-decoration: none;
-            color: black;
-        }
+.menu > li > a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    transition: all 0.3s;
+}
 
-    .menu li a:hover {
-        background: white;
-        transition: all .3s;
-    }
+.menu > li > a:hover {
+    background: white;
+    color: black;
+}
 
-    .sudmenu {
-        position: absolute;
-        left: 0;
-        top: 100%;
-        visibility: hidden;
-        opacity: 0;
-        display: flex;
-        flex-direction: column;
-        background: white;
-        z-index: 1000;
-        transition: opacity 0.3s, visibility 0.3s;
-    }
+.sudmenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    z-index: 1000;
+    transition: opacity 0.3s, visibility 0.3s;
+}
 
-        .sudmenu li {
-            width: 100%;
-        }
+.sudmenu li {
+    width: 100%;
+}
 
-            .sudmenu li a {
-                display: block;
-                padding: 15px;
-                color: black;
-                text-decoration: none;
-            }
+.sudmenu li a {
+    display: block;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
 
-    .menu li:hover .sudmenu {
-        visibility: visible;
-        opacity: 1;
-    }
+.menu li:hover .sudmenu {
+    visibility: visible;
+    opacity: 1;
+}
 
     .footer {
-        height: 70px;
-        width: 100%;
-        position: relative;
-        color: white;
-        background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
-        text-align: center;
-        font-size: 16px;
-        line-height: 70px;
-        margin-top: 20px;
+    
+    height: 70px;
+    width: 100%;
+    position: relative;
+    color: white;
+    background: black;
+    text-align: center;
+    font-size: 16px;
+    line-height: 70px;
+    margin-top: 0; /* Elimina cualquier margen superior */
     }
+
 
     .icono-cart {
         font-size: 20px;
@@ -113,7 +119,7 @@
         .menu li.cart a {
             display: inline-flex;
             align-items: center;
-            color: black;
+            color: white;
             text-decoration: none;
         }
 
@@ -138,13 +144,13 @@
             color: lightblue; /* Color de texto al pasar el mouse */
         }
         .center {
-    text-align: center; /* Centra el contenido horizontalmente */
-    margin: 0 auto; /* Centra el div en el centro de la página */
-    width: 50%; /* Ancho del div */
-    padding: 20px; /* Espaciado interno */
-}
+            text-align: center; /* Centra el contenido horizontalmente */
+            margin: 0 auto; /* Centra el div en el centro de la página */
+            width: 50%; /* Ancho del div */
+            padding: 20px; /* Espaciado interno */
+        }
    .search-bar {
-       width: 250px;
+       width: 200px;
        border: 1px solid #ccc;
        border-radius: 20px;
        overflow: hidden;
@@ -176,19 +182,18 @@
    }
    .search-container {
     text-align: center; /* Centra el contenedor horizontalmente */
-    margin-top: 20px; /* Espacio superior entre la imagen y el contenedor de búsqueda */
+    margin-top: 50px; /* Espacio superior entre la imagen y el contenedor de búsqueda */
+    margin-bottom: 50px;
     width: 80%; /* Ancho del contenedor de búsqueda como un porcentaje del contenedor padre */
     max-width: 500px; /* Ancho máximo del contenedor de búsqueda para limitar su tamaño */
     border: 1px solid #ccc;
     border-radius: 20px;
     overflow: hidden;
     margin: 0 auto; /* Centra el contenedor horizontalmente */
-    
-
-   }
+}
 
       body, html {
-            margin: 0;
+            margin-top: 0;
             padding: 0;
             width: 100%;
         }
@@ -213,7 +218,7 @@
 
 </style>
 <html>
-<head runat="server">
+<head runat="server" style="margin: 0;">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -257,6 +262,12 @@
                     <span class="visually-hidden">Next</span>
                   </button>
                </div>
+                   <div class="search-container">
+                         <asp:TextBox ID="searchTextBox" runat="server" CssClass="search-input" placeholder="Buscar..." onkeydown="enter(event)"></asp:TextBox>
+                         <asp:LinkButton ID="btnSearch" runat="server" CssClass="search-button" OnClick="btnSearch_Click" type="button">
+                          <i class="fas fa-search"></i>
+                         </asp:LinkButton>
+                   </div>
 
                 <nav class="navegacion">
                     <ul class="menu">
@@ -312,22 +323,8 @@
                         </li>
                     </ul>
                 </nav>
-                 <div class="search-container">
-                     <asp:TextBox ID="searchTextBox" runat="server" CssClass="search-input" placeholder="Buscar..." onkeydown="enter(event)"></asp:TextBox>
-                     <asp:LinkButton ID="btnSearch" runat="server" CssClass="search-button" OnClick="btnSearch_Click" type="button">
-                      <i class="fas fa-search"></i>
-                     </asp:LinkButton>
-                </div>
-                 <script>
-                     function enter(event) {
-                         if (event.keyCode === 13 || event.which === 13) {
-                             event.preventDefault();
-                             document.getElementById('<%= btnSearch.ClientID %>').click();
-                          }
-                      }
-             
-
-                 </script>
+                 
+                
             </header>
             <div class="content">
                 <section>
@@ -342,3 +339,13 @@
     </footer>
 </body>
 </html>
+ <script>
+     function enter(event) {
+         if (event.keyCode === 13 || event.which === 13) {
+             event.preventDefault();
+             document.getElementById('<%= btnSearch.ClientID %>').click();
+         }
+     }
+
+
+ </script>
